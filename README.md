@@ -10,6 +10,10 @@ Uma plataforma de catalogação, descoberta e registro de experiências musicais
 
 ---
 
+## 👤 Identificação/Autor
+
+**Leonardo Nicolau Skorobohatei**
+
 ## 📖 Sobre o projeto
 
 Enquanto os serviços de streaming são feitos para **tocar** música, o **Audiary** é feito para você **lembrar** dela.
@@ -37,6 +41,18 @@ O objetivo é funcionar como um diário musical digital: um espaço onde você r
 | **Dados musicais** | MusicBrainz/Last.fm API |
 | **Ferramentas** | Node.js, NPM, ESLint, Prettier, Git/GitHub |
 
+### 🎨 Framework CSS
+
+**Bootstrap**
+
+### 📦 Dependências
+
+Principais bibliotecas JavaScript utilizadas no projeto:
+
+- **jQuery** — manipulação do DOM e eventos
+- **Bootstrap (JS)** — componentes interativos da interface
+- **JSON Server** — simulação de API REST para persistência de dados
+
 ## 🏗️ Arquitetura
 
 ```mermaid
@@ -59,28 +75,7 @@ graph TD
 - **Resenha** → texto e data de criação
 - **Lista de Desejos** → álbuns a ouvir no futuro
 
-## 🚀 Como rodar o projeto
-
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/audiary.git
-
-# Acesse a pasta do projeto
-cd audiary
-
-# Instale as dependências
-npm install
-
-# Inicie a API fake (JSON Server)
-npm run server
-
-# Inicie a aplicação
-npm start
-```
-
-> Ajuste os comandos acima conforme os scripts definidos no seu `package.json`.
-
-## 📋 Roadmap
+## ✅ Checklist de Funcionalidades
 
 **MVP**
 - [ ] Busca de artistas e álbuns
@@ -101,6 +96,27 @@ npm start
 - [ ] Estatísticas pessoais de audição
 - [ ] Sugestões de álbuns por gênero favorito
 
+## 🚀 Instruções de Execução
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/audiary.git
+
+# Acesse a pasta do projeto
+cd audiary
+
+# Instale as dependências
+npm install
+
+# Inicie a API fake (JSON Server)
+npm run server
+
+# Inicie a aplicação
+npm start
+```
+
+> Ajuste os comandos acima conforme os scripts definidos no seu `package.json`.
+
 ## 📖 Checklist | Indicadores de Desempenho (ID)
 
 **Link:** [Checklist de IDs](docs/checklist-IDs.md)
@@ -110,10 +126,6 @@ npm start
 - Reprodução de áudio dentro da aplicação
 - Importação automática de histórico (Spotify, Apple Music, etc.)
 - Sistema de seguidores e interação social
-
-## 👤 Autor
-
-**Leonardo Nicolau Skorobohatei**
 
 ---
 
