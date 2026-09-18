@@ -32,26 +32,26 @@ O objetivo é funcionar como um diário musical digital: um espaço onde você r
 - 👤 **Perfil** com todo o seu histórico, avaliações e resenhas
 - 🎚️ Filtros por **gênero** e **ano de lançamento**
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias e Dependências
 
-| Camada | Tecnologias |
-|---|---|
-| **Front-end** | HTML5, CSS3, Sass/SCSS, Bootstrap, JavaScript, jQuery |
-| **Persistência de dados** | JSON Server (API fake) + LocalStorage |
-| **Dados musicais** | MusicBrainz/Last.fm API |
-| **Ferramentas** | Node.js, NPM, ESLint, Prettier, Git/GitHub |
+- **HTML5:** estrutura das páginas.
+- **CSS3:** estilização e layouts personalizados.
+- **Sass/SCSS:** organização e modularização dos estilos.
+- **JavaScript:** lógica e interatividade da aplicação.
+- **jQuery & Plugins:** manipulação do DOM e aplicação de máscaras em formulários (jQuery Mask Plugin).
+- **Node.js e NPM:** gerenciamento de dependências e ferramentas do projeto.
+- **JSON Server:** API fake para persistência e consulta dos dados.
+- **ESLint:** análise estática e padronização do código JavaScript.
+- **Prettier:** formatação automática do código.
+- **Git/GitHub:** versionamento e gerenciamento do código-fonte.
 
-### 🎨 Framework CSS
+- **Framework CSS:** O Bootstrap foi escolhido como framework CSS principal pois ele é a framework
+que mais oferece um equilíbrio entre funcionalidade e estética para o Audiary. Com o Bootsrap é possível
+oferecer uma responsividade do layout sem sacrificar a identidade visual do Audiary.
 
-**Bootstrap**
-
-### 📦 Dependências
-
-Principais bibliotecas JavaScript utilizadas no projeto:
-
-- **jQuery** — manipulação do DOM e eventos
-- **Bootstrap (JS)** — componentes interativos da interface
-- **JSON Server** — simulação de API REST para persistência de dados
+- **API Pública:** A API pública de música escolhida foi a API do Last.fm (Last.fm API) pois ela 
+é a API que mais se encaixa na proposta do Audiary pois ela oferece tudo que a página necessita,
+como nome de álbuns, imagens da capa em diferentes tamanhos, nome do artista e tags de genêro exatas.
 
 ## 🏗️ Arquitetura
 
