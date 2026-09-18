@@ -28,7 +28,6 @@ graph TD
 
 - **HTML5:** estrutura das páginas.
 - **CSS3:** estilização e layouts personalizados.
-- **Bootstrap v5.3.3:** framework CSS utilizado para componentes e layouts responsivos.
 - **Sass/SCSS:** organização e modularização dos estilos.
 - **JavaScript:** lógica e interatividade da aplicação.
 - **jQuery & Plugins:** manipulação do DOM e aplicação de máscaras em formulários (jQuery Mask Plugin).
@@ -37,6 +36,10 @@ graph TD
 - **ESLint:** análise estática e padronização do código JavaScript.
 - **Prettier:** formatação automática do código.
 - **Git/GitHub:** versionamento e gerenciamento do código-fonte.
+
+## 3.1 Framework e API Pública escolhidas
+
+- **Bootstrap v5.3.3:** framework CSS utilizado para componentes e layouts responsivos.
 - **Last.fm API v2.0 (API Pública de Música):** fornecimento de informações sobre artistas e álbuns.
 
 ## 4. Modelo de Dados
