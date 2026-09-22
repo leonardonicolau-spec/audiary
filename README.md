@@ -121,6 +121,16 @@ npm start
 
 **Link:** [Checklist de IDs](docs/checklist-IDs.md)
 
+## Checklist da Atividade 06
+
+- [x] Configurei minha identidade no Git
+- [x] Clonei o repositório do meu projeto
+- [x] Inicializei o NPM (package.json)
+- [x] Criei o .gitignore ignorando node_modules e .env
+- [x] Instalei jquery e uuid como dependências de produção
+- [x] Instalei gh-pages como dependência de desenvolvimento
+- [x] Fiz commit e push para a branch main
+
 ## 🙅 Fora do escopo (por enquanto)
 
 - Reprodução de áudio dentro da aplicação
