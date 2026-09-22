@@ -1,0 +1,29 @@
+{
+  "name": "audiary",
+  "version": "1.0.0",
+  "description": "Uma plataforma de catalogação, descoberta e registro de experiências musicais — inspirada no Letterboxd, mas para os álbuns que você ouve.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardonicolau-spec/audiary-catalogo-musical.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/leonardonicolau-spec/audiary-catalogo-musical/issues"
+  },
+  "homepage": "https://github.com/leonardonicolau-spec/audiary-catalogo-musical#readme",
+  "dependencies": {
+    "jquery": "^4.0.0",
+    "uuid": "^14.0.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
