@@ -1,0 +1,40 @@
+:root {
+    --bs-danger: #FF544B;
+    --bs-danger-rgb: 255, 84, 75;
+    --bs-dark: #1B1B1F;
+    --bs-dark-rgb: 27, 27, 31;
+    --bs-font-sans-serif: "Inter", system-ui, -apple-system, sans-serif;
+    --bs-font-monospace: "JetBrains Mono", monospace;
+    --bs-body-bg: #FFFFFF;
+    --bs-body-secondary-bg: #F2F0F4;
+    --bs-body-tertiary-bg: #EAE8EC;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-display, .navbar-brand, .footer-t {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.tracking {
+    letter-spacing: .02em;
+}
+
+.stat-card1 {
+    background: linear-gradient(135deg, #fefdff 0%, #eceff7 100%);
+    border-color: rgba(27, 27, 31, 0.08) !important;
+}
+
+.avatar-sm {
+    width: 24px;
+    height: 24px;
+}
+
+.fav-album {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}

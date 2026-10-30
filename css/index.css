@@ -1,0 +1,86 @@
+:root {
+    --bs-danger: #FF544B;
+    --bs-danger-rgb: 255, 84, 75;
+    --bs-dark: #1B1B1F;
+    --bs-dark-rgb: 27, 27, 31;
+    --bs-font-sans-serif: "Inter", system-ui, -apple-system, sans-serif;
+    --bs-font-monospace: "JetBrains Mono", monospace;
+    --bs-body-bg: #FFFFFF;
+    --bs-body-secondary-bg: #F2F0F4;
+    --bs-body-tertiary-bg: #EAE8EC;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-display, .navbar-brand, .footer-t {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.hero-overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(13, 14, 17, 0.90) 0%,
+        rgba(13, 14, 17, 0.72) 50%,
+        rgba(13, 14, 17, 0.40) 100%
+    );
+}
+
+.album-c {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.avatar-sm {
+    width: 24px;
+    height: 24px;
+}
+
+.hero-overlay {
+    background: linear-gradient(
+                90deg,
+                rgba(13, 14, 17, 0.90) 0%,
+                rgba(13, 14, 17, 0.72) 50%,
+                rgba(13, 14, 17, 0.40) 100% );
+}
+
+.card-scroll {
+    max-height: 380px; 
+    overflow-y: auto;  
+}
+
+.card-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+.card-scroll::-webkit-scrollbar-thumb {
+    background-color: #EAE8EC; 
+    border-radius: 10px;
+}
+
+.card.d-flex.flex-column.gap-3.border-0.rounded-1.p-3.shadow-sm.h-100 {
+    background-color: #ebebeb;
+}
+
+@media (min-width: 1200px) {
+    .card-scroll {
+        max-height: 380px;
+        overflow-y: auto;
+    }
+}
+
+#cadastro {
+    background-color: #343434;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #f4f1fa 0%, #eceff7 100%);
+    border-color: rgba(27, 27, 31, 0.08) !important;
+}
+
+.tracking {
+    letter-spacing: .02em;
+}

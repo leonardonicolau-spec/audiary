@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiary</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white border-opacity-10 py-3"
+            data-bs-theme="dark">
+            <div class="container-xl px-3 px-sm-4">
+                <a class="navbar-brand fw-bold text-danger fs-4" href="#">Audiary</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul
+                        class="navbar-nav ms-auto align-items-lg-center font-monospace nav-underline small pt-2 pt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-danger fw-semibold" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="user.html">Usuário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="tapin.html">Explorar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#cadastro">Cadastre-se</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="position-relative overflow-hidden d-flex align-items-center py-5 hero-section" style="min-height: 420px;">
+            <video autoplay muted loop playsinline
+                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover pe-none z-0">
+                <source
+                    src="https://res.cloudinary.com/lpmoxxkl/video/upload/v1792365358/YTDown.com_YouTube_underscores-The-Peace_Media_Gf-fCJ6TkRU_001_1080p.mp4"
+                    type="video/mp4">
+            </video>
+            <div class="position-absolute top-0 start-0 w-100 h-100 z-1 pe-none hero-overlay"></div>
+
+            <div class="container-xl position-relative z-2 px-3 px-sm-4 py-4 py-lg-5">
+                <div class="col-12 col-lg-9 col-xl-8">
+                    <h1 class="display-3 fw-bold text-danger lh-1 mb-3 text-break">
+                        KEEP TRACK OF WHAT YOU HEAR --
+                    </h1>
+
+                    <p class="lead text-white mb-4 col-12 col-md-10" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);">
+                        Guarde e avalie os álbuns que você ouve no seu dia a dia.
+                        Seu diário musical pessoal com telemetria sônica precisa e estética industrial.
+                    </p>
+
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="#cadastro">
+                            <button class="btn btn-danger btn-lg w-100 font-monospace fw-semibold px-4 py-2 text-lowercase">cadastre-se</button>
+                        </a>
+                        <a href="login.html">
+                            <button class="btn btn-secondary btn-lg font-monospace fw-semibold px-4 py-2 text-lowercase">login</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-body position-relative overflow-hidden d-flex align-items-center py-5">
+            <div class="container-xl px-3 px-sm-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 col-xl-7">
+                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                            <h2 class="h5 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                 <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> AUDIÇÃO EM DESTAQUE
+                            </h2>
+                            <span class="text-secondary fw-bold font-monospace small">critic_selection // curated</span>
+                        </div>
+
+                        <div class="stat-card border shadow-sm rounded-3 p-3 p-md-4 h-100">
+                            <div class="card-body p-0 d-flex flex-column flex-sm-row gap-3 gap-md-4">
+                                <div class="flex-shrink-0 text-center text-sm-start">
+                                    <img class="album-c rounded-3 shadow-sm"
+                                        src="https://res.cloudinary.com/lpmoxxkl/image/upload/v1792112066/Selected_Ambient_Works_85-92.jpg"
+                                        alt="Capa do álbum Selected Ambient Works 85-92 - Aphex Twin"
+                                        style="width: 100%; max-width: 260px; aspect-ratio: 1 / 1; object-fit: cover;">
+                                </div>
+
+                                <div class="d-flex flex-column flex-grow-1 min-w-0">
+                                    <p class="text-secondary font-monospace small mb-1">WARP RECORDS • 1992</p>
+                                    <h3 class="h4 fw-bold text-dark mb-1 text-break">SELECTED AMBIENT WORKS</h3>
+                                    <p class="h6 fw-bold text-danger mb-3">APHEX TWIN</p>
+
+                                    <div class="card bg-body-tertiary border-0 rounded-3 p-3 mt-auto shadow-sm">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <span class="avatar-sm rounded-circle bg-danger flex-shrink-0"></span>
+                                            <span
+                                                class="font-monospace fw-semibold small text-dark">@demonio_666hell</span>
+                                        </div>
+
+                                        <p class="card-text text-secondary small mb-3">
+                                            &ldquo;O disco fundacional da eletrônica inteligente.
+                                            Texturas translúcidas que ecoam a pureza arquitetônica de uma metrópole
+                                            vazia às quatro da manhã.
+                                            Obra-prima indiscutível.&rdquo;
+                                        </p>
+
+                                        <div class="d-flex flex-row gap-2">
+                                            <button
+                                                class="btn btn-outline-danger btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-heart me-1"></i> Curtir
+                                            </button>
+                                            <button
+                                                class="btn btn-outline-dark btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-chat me-1"></i>
+                                                Comentar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="col-12 col-xl-5">
+                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                            <h2 class="h5 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                 <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> ÁLBUNS EM ALTA
+                            </h2>
+                            <span class="text-secondary fw-bold font-monospace small">trending // weekly</span>
+                        </div>
+
+                        <div class="stat-card border shadow-sm rounded-3 p-3 p-md-4 h-100 card-scroll"
+                            style="min-height: 330px;">
+                            <div class="card-body p-0 d-flex flex-column">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="card bg-body-tertiary border rounded-2 p-3 shadow-sm h-100">
+                                        <div class="d-flex flex-row gap-3">
+                                            <img class="album-cover rounded-3 shadow-sm"
+                                                style="  width: 6rem; max-width: 260px; aspect-ratio: 1 / 1; object-fit: cover;"
+                                                src="https://res.cloudinary.com/lpmoxxkl/image/upload/v1792535318/heart.jpg">
+                                            <div class="d-flex flex-column">
+                                                <h3 class="h5 fw-bold text-dark mb-1 text-break">♡ (Heart)</h3>
+                                                <p class="text-secondary small mb-3">Jane Remover</p>
+                                                <p class="text-secondary small mb-2">"Heart é o segundo EP (extended
+                                                    play) da musicista americana Jane Remover. O..."</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card bg-body-tertiary border rounded-2 p-3 shadow-sm h-100">
+                                        <div class="d-flex flex-row gap-3">
+                                            <img class="album-cover rounded-3 shadow-sm"
+                                                style="  width: 6rem; max-width: 260px; aspect-ratio: 1 / 1; object-fit: cover;"
+                                                src="https://res.cloudinary.com/lpmoxxkl/image/upload/v1792537104/carranca.jpg">
+                                            <div class="d-flex flex-column">
+                                                <h3 class="h5 fw-bold text-dark mb-1 text-break">Carranca</h3>
+                                                <p class="text-secondary small mb-3">Urias</p>
+                                                <p class="text-secondary small mb-2">"Carranca é o terceiro álbum de
+                                                    estúdio da cantora e compositora brasileira Urias, lan..."</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card bg-body-tertiary border rounded-2 p-3 shadow-sm h-100">
+                                        <div class="d-flex flex-row gap-3">
+                                            <img class="album-cover rounded-3 shadow-sm"
+                                                style="  width: 6rem; max-width: 260px; aspect-ratio: 1 / 1; object-fit: cover;"
+                                                src="https://res.cloudinary.com/lpmoxxkl/image/upload/v1792537394/o.jpg">
+                                            <div class="d-flex flex-column">
+                                                <h3 class="h5 fw-bold text-dark mb-1 text-break">Ö</h3>
+                                                <p class="text-secondary small mb-3">Fcukers</p>
+                                                <p class="text-secondary small mb-2">"Ö é o álbum de estreia do duo de
+                                                    música eletrônica nova-iorquino Fcukers, lançado em 27...."</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card bg-body-tertiary border rounded-2 p-3 shadow-sm h-100">
+                                        <div class="d-flex flex-row gap-3">
+                                            <img class="album-cover rounded-3 shadow-sm"
+                                                style="  width: 6rem; max-width: 260px; aspect-ratio: 1 / 1; object-fit: cover;"
+                                                src="https://res.cloudinary.com/lpmoxxkl/image/upload/v1792537824/u.jpg">
+                                            <div class="d-flex flex-column">
+                                                <h3 class="h5 fw-bold text-dark mb-1 text-break">U</h3>
+                                                <p class="text-secondary small mb-3">Underscores</p>
+                                                <p class="text-secondary small mb-2">"U is the third studio album by the
+                                                    American musician Underscores. It was released..."</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-body-secondary position-relative overflow-hidden d-flex align-items-center py-5" id="manifesto">
+            <div class="container-xl px-3 px-sm-4">
+                <div class="row g-4 align-items-center">
+                    <div class="row g-3 align-items-center">
+
+                        <div class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
+                            <span class="text-danger fw-bold font-monospace small">// MANIFESTO TÉCNICO</span>
+                            <h1 class="h2 fw-bold text-dark mb-0 d-flex align-items-center gap-2">A DIFERENÇA ENTRE
+                                TOCAR E LEMBRAR</h1>
+                        </div>
+
+                        <div class="col-12 col-xl-14">
+                            <div class="d-flex flex-column flex-sm-row gap-4 align-items-center">
+                                <div
+                                    class="card d-flex flex-column gap-3 bg-dark border-0 rounded-3 p-3 shadow-sm h-100">
+                                    <div
+                                        class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
+                                        <span class="text-danger fw-bold font-monospace small">
+                                             <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> [AUDIARY PROTOCOL //
+                                            spec.001]
+                                        </span>
+                                        <h2 class="h5 fw-bold text-white mb-0 d-flex align-items-center gap-2">
+                                            ARQUIVAMENTO OBSESSIVO</h2>
+                                    </div>
+
+                                    <div class="text-white">
+                                        Diário cronológico de audição, resenhas de estúdio, taxa de compressão e
+                                        indexação imutável com telemetria pessoal de alta fidelidade. Seus dados
+                                        pertencem a você para sempre.
+                                    </div>
+
+                                    <div class="d-flex flex-column gap-2">
+                                        <hr class="text-secondary opacity-25">
+                                        <div class="d-flex flex-row gap-2">
+                                            <div class="bi-check-circle text-danger"></div> <span
+                                                class="text-danger fw-bold font-monospace small">REGISTRO ANALÍTICO
+                                                PERMANENTE</span>
+                                        </div>
+
+                                        <div class="d-flex flex-row gap-2">
+                                            <div class="bi-check-circle text-danger"></div> <span
+                                                class="text-danger fw-bold font-monospace small">ESCOLHA TOTAL DO USUÁRIO</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stat-card d-flex flex-column gap-3 border rounded-3 p-3 shadow-sm h-100">
+                                    <div
+                                        class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
+                                        <span class="text-danger fw-bold font-monospace small">
+                                             <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> [AUDIARY PROTOCOL //
+                                            spec.002]
+                                        </span>
+                                        <h2 class="h5 fw-bold text-black mb-0 d-flex align-items-center gap-2">
+                                            REPRODUÇÃO VOLÁTIL</h2>
+                                    </div>
+
+                                    <div class="text-black">
+                                        Algoritmo passivo, consumo descartável, reprodução invisível sem registro
+                                        crítico. O que você ouviu em 2021 desaparece no ruído do feed e nos silos
+                                        fechados das grandes corporações.
+                                    </div>
+
+                                    <div class="d-flex flex-column gap-2">
+                                        <hr class="text-secondary opacity-25">
+                                        <div class="d-flex flex-row gap-2">
+                                            <div class="bi-check-circle text-danger"></div> <span
+                                                class="text-danger fw-bold font-monospace small">SEM TELEMETRIA HISTÓRICA</span>
+                                        </div>
+
+                                        <div class="d-flex flex-row gap-2">
+                                            <div class="bi-check-circle text-danger"></div> <span
+                                                class="text-danger fw-bold font-monospace small">SEM METADADOS SUPERFICIAIS E
+                                                DESBOTADOS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-body position-relative overflow-hidden d-flex align-items-center py-5">
+            <div class="container-xl px-3 px-sm-4">
+                <div class="row g-4 align-items-center">
+                    <div class="row g-3 align-items-center">
+
+                        <div class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
+                            <span class="text-danger font-monospace small">// TELEMETRIA GLOBAL</span>
+                            <h1 class="h2 fw-bold text-dark mb-0 d-flex align-items-center gap-2">ESTADO DA REDE</h1>
+                        </div>
+
+                        <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                            <div class="col-12 col-xl-7">
+                                <div class="d-flex flex-column gap-4">
+                                    <div
+                                        class="stat-card d-flex flex-column gap-3 bg-white border rounded-3 p-3 shadow-sm h-100">
+                                        <div
+                                            class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
+                                            <span class="text-black font-monospace small">INDEXAÇÃO GLOBAL</span>
+                                            <div class="w-100 d-flex flex-row align-items-center">
+                                                <h2 class="h1 fw-bold text-danger mb-0 d-flex align-items-center gap-2">
+                                                    142.800 +</h2>
+                                                <span class="text-danger fw-bold font-monospace small ms-auto">[DISCOS
+                                                    REGISTRADOS]</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="stat-card d-flex flex-column gap-3 bg-white border rounded-3 p-3 shadow-sm h-100">
+                                        <div
+                                            class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
+                                            <span class="text-dark font-monospace small">METADADOS PERSISTIDOS</span>
+                                            <div class="w-100 d-flex flex-row align-items-center">
+                                                <h2 class="h1 fw-bold text-danger mb-0 d-flex align-items-center gap-2">
+                                                    99.8%</h2>
+                                                <span class="text-danger fw-bold font-monospace small ms-auto">[FIDELIDADE
+                                                    AUDIOFILA]</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="stat-card d-flex flex-column gap-3 bg-white border rounded-3 p-3 shadow-sm h-100">
+                                        <div
+                                            class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
+                                            <span class="text-dark font-monospace small">NOTAS DE ESTÚDIO</span>
+                                            <div class="w-100 d-flex flex-row align-items-center">
+                                                <h2 class="h1 fw-bold text-danger mb-0 d-flex align-items-center gap-2">
+                                                    18.4k</h2>
+                                                <span class="text-danger fw-bold font-monospace small ms-auto">[CRÍTICAS
+                                                    INDEXADAS]</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="col-12 col-xl-5">
+                            <div class="stat-card d-flex flex-column gap-0 bg-white border rounded-3 p-3 shadow-sm h-100">
+                                    <div class="d-flex flex-column align-items-start justify-content-between gap-1 mb-3">
+                                        <span class="text-danger fw-bold font-monospace small">
+                                             <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> [AUDIARY PROTOCOL //spec.003]
+                                        </span>
+                                        <h2 class="h5 fw-bold text-black mb-0 d-flex align-items-center tracking' gap-2">MODULOS DE CAMPO</h2>
+                                    </div>
+
+                                <div class="d-flex flex-column gap-3">
+
+                                    <div class="d-flex flex-column gap-1">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="bi bi-check-circle text-danger"></i>
+                                            <span class="text-danger fw-bold font-monospace tracking small">TAXONOMIA ACÚSTICA</span>
+                                        </div>
+                                        <p class="text-black small mb-0">
+                                            Documente data exata, contagem de repetições, cadeia de áudio (FLAC
+                                            24-Bit / Vinil / DSD) e notas estruturadas de 0.5 a 5 estrelas.
+                                        </p>
+                                    </div>
+
+                                    <div class="d-flex flex-column gap-1">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="bi bi-check-circle text-danger"></i>
+                                            <span class="text-danger fw-bold font-monospace tracking small">HISTÓRICO IMUTÁVEL</span>
+                                        </div>
+                                        <p class="text-black small mb-0">
+                                            Linha do tempo ininterrupta das obras consumidas mês a mês com
+                                            cruzamento cirúrgico de gêneros, selos fonográficos e BPM.
+                                        </p>
+                                    </div>
+
+                                    <div class="d-flex flex-column gap-1">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="bi bi-check-circle text-danger"></i>
+                                            <span class="text-danger fw-bold font-monospace tracking small">DOCUMENTAÇÃO EDITORIAL</span>
+                                        </div>
+                                        <p class="text-black small mb-0">
+                                            Escreva análises ricas com diagramação técnica, separação por faixas
+                                            prioritárias e apreciação dedicada à engenharia de som.
+                                        </p>
+                                    </div>
+
+                                    <div class="d-flex flex-column gap-1">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="bi bi-check-circle text-danger"></i>
+                                            <span class="text-danger fw-bold font-monospace tracking small">TETRAD ESSENCIAL</span>
+                                        </div>
+                                        <p class="text-black small mb-0">
+                                            Os 4 pilares fundamentais da sua vida sonora fixados no seu perfil
+                                            público e uma fila de escuta calculada por prioridade.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-body-bg position-relative overflow-hidden d-flex align-items-center py-5" id="cadastro">
+            <div class="container-xl px-3 px-sm-4">
+                <div class="row g-4 align-items-center">
+                    <div class="row g-3 align-items-center">
+
+                        <div class="card d-flex flex-column gap-3 bg-danger border-0 rounded-3 p-3 shadow-sm h-100">
+                            <div class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
+                                <span class="text-white font-monospace fw-bold tracking small">INIT_ACCOUNT</span>
+
+                                <div class="w-100 d-flex flex-column gap-4 align-items-start">
+                                    <h2 class="h1 fw-bold text-white mb-0 d-flex align-items-center gap-2">ASSUMA O CONTROLE DO SEU <br> HISTÓRICO SONORO.</h2>
+                                    <span class="text-white medium"> Cadastre-se gratuitamente. Crie seu primeiro relatório em menos de 60 segundos <br> e importe seu histórico do Last.fm ou Discogs. </span>
+
+                                    <div class="d-flex flex-column flex-sm-row gap-3 align-items-stretch w-100">
+                                        <input type="text" placeholder="Exemplo: audiophile13@email.com" class="form-control">
+                                        <button class="btn btn-secondary btn-xl font-monospace fw-semibold px-3 py-2 text-nowrap flex-shrink-0">[CRIAR CONTA // LIVE]</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-body py-4 border-top mt-auto">
+        <div
+            class="container-xl px-3 px-sm-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-secondary">
+            <p class="mb-0 text-dark">Copyright &copy; 2026  <span class="footer-t text-danger fw-bold h4">Audiary</span>  Inc. All rights reserved</p>
+            <p class="mb-0 text-secondary">Privacy Policy | Terms of Use | Sales and Refunds | Legal | Site Map</p>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

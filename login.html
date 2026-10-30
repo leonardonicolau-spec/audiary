@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiary | Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white border-opacity-10 py-3"
+            data-bs-theme="dark">
+            <div class="container-xl px-3 px-sm-4">
+                <a class="navbar-brand fw-bold text-danger fs-4" href="index.html">Audiary</a>
+ 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+ 
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul
+                        class="navbar-nav ms-auto align-items-lg-center font-monospace nav-underline small pt-2 pt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="user.html">Usuário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="tapin.html">Explorar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="index.html#cadastro">Cadastre-se</a>
+                        </li>
+                        <li class="nav-item">cd
+                            <a class="nav-link active text-danger fw-semibold" aria-current="page" href="#">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+ 
+    <main class="flex-grow-1 d-flex align-items-center py-5">
+        <div class="container-xl px-3 px-sm-4">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
+ 
+                    <div class="stat-card bg-body-secondary border rounded-3 p-4 shadow-sm">
+ 
+                        <div class="d-flex flex-column gap-1 mb-4">
+                            <span class="text-danger fw-bold font-monospace small">
+                                <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> [AUDIARY // login]
+                            </span>
+                            <h1 class="h3 fw-bold text-black mb-0">BEM-VINDO DE VOLTA.</h1>
+                            <p class="text-secondary small mb-0">
+                                Entre para acessar seu histórico sonoro e seus relatórios.
+                            </p>
+                        </div>
+ 
+                        <form id="form-login" class="d-flex flex-column gap-3" action="#" novalidate>
+ 
+                            <div>
+                                <label for="email" class="form-label fw-bold font-monospace small text-black mb-1">E-MAIL</label>
+                                <input type="email" id="email" name="email" class="form-control py-2"
+                                    placeholder="audiophile13@email.com" autocomplete="email">
+                            </div>
+ 
+                            <div>
+                                <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                    <label for="senha" class="form-label fw-bold font-monospace small text-black mb-0">SENHA</label>
+                                    <a href="#" class="font-monospace small text-danger text-decoration-none">
+                                        Esqueci minha senha
+                                    </a>
+                                </div>
+                                <input type="password" id="senha" name="senha" class="form-control py-2"
+                                    placeholder="Sua senha" autocomplete="current-password">
+                            </div>
+ 
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="lembrar" name="lembrar">
+                                <label class="form-check-label small text-black" for="lembrar">
+                                    Manter conectado
+                                </label>
+                            </div>
+ 
+                            <button type="submit"
+                                class="btn btn-danger font-monospace fw-bold py-2 w-100 text-nowrap">
+                                [ENTRAR // LIVE]
+                            </button>
+                        </form>
+
+                        <div class="d-flex align-items-center gap-3 my-4">
+                            <hr class="flex-grow-1 m-0">
+                            <span class="font-monospace small text-secondary">OU</span>
+                            <hr class="flex-grow-1 m-0">
+                        </div>
+ 
+                        <button type="button"
+                            class="btn btn-outline-dark font-monospace fw-semibold py-2 w-100 text-nowrap"
+                            id="btn-lastfm">
+                            <i class="bi bi-lastfm me-2"></i>Entrar com Last.fm
+                        </button>
+
+                        <p class="text-center small text-secondary font-monospace small mt-4 mb-0">
+                            Ainda não tem conta?
+                            <a href="index.html#cadastro" class="text-danger fw-semibold text-decoration-none">
+                                Criar conta grátis
+                            </a>
+                        </p>
+                    </div>
+ 
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-body py-4 border-top mt-auto">
+        <div
+            class="container-xl px-3 px-sm-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-secondary">
+            <p class="mb-0 text-dark">Copyright &copy; 2026 <span class="footer-t text-danger fw-bold h4">Audiary</span> Inc. All rights reserved</p>
+            <p class="mb-0 text-secondary">Privacy Policy | Terms of Use | Sales and Refunds | Legal | Site Map</p>
+        </div>
+    </footer>
+ 
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+ 
+</html>

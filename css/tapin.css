@@ -1,0 +1,58 @@
+:root {
+    --bs-danger: #FF544B;
+    --bs-danger-rgb: 255, 84, 75;
+    --bs-dark: #1B1B1F;
+    --bs-dark-rgb: 27, 27, 31;
+    --bs-font-sans-serif: "Inter", system-ui, -apple-system, sans-serif;
+    --bs-font-monospace: "JetBrains Mono", monospace;
+    --bs-body-bg: #FFFFFF;
+    --bs-body-secondary-bg: #F2F0F4;
+    --bs-body-tertiary-bg: #EAE8EC;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-display, .navbar-brand, .footer-t {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.bg-body-secondary.py-4.border-top {
+    background-color: #e5e5e5 !important;
+}
+
+.res-album {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
+.stat-card1 {
+    background: linear-gradient(135deg, #fefdff 0%, #eceff7 100%);
+    border-color: rgba(27, 27, 31, 0.08) !important;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #fefdff 0%, #eceff7 100%);
+    border-color: rgba(27, 27, 31, 0.08) !important;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px) scale(1.02); /* Sobe e cresce 2% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.fav-album {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.avatar-sm {
+    width: 24px;
+    height: 24px;
+}

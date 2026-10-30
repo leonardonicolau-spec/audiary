@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiary | Usuário</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/user.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white border-opacity-10 py-3"
+            data-bs-theme="dark">
+            <div class="container-xl px-3 px-sm-4"> 
+                <a class="navbar-brand fw-bold text-danger fs-4" href="index.html">Audiary</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul
+                        class="navbar-nav ms-auto align-items-lg-center font-monospace nav-underline small pt-2 pt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 fw-semibold" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-danger fw-semibold" aria-current="page" href="#">Usuário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="tapin.html">Explorar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="index.html#cadastro">Cadastre-se</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="py-4 py-md-5 bg-body">
+        <div class="container-xl px-3 px-sm-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-xl-12">
+                    <div class="d-flex flex-column gap-4">
+                        <div class="d-flex flex-row align-items-center flex-wrap gap-2">
+                            <span class="text-body-secondary fw-bold font-monospace small">
+                                <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> AUDIARY / PERFIL DO OUVINTE /
+                                <span class="text-danger font-monospace">[MEMBRO ATIVO]</span>
+                            </span>
+                        </div>
+
+                        <div class="stat-card1 bg-body-secondary border rounded-3 p-3 p-md-4 shadow-sm">
+                            <div class="row g-3 g-xl-4 align-items-center">
+                                <div class="col-auto">
+                                    <div class="d-flex flex-column gap-1">
+                                        <img class="user-pfp rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1792957656/IMG_20261025_133315_1.jpg" alt="Foto de perfil de Leonardo">
+                                        <span class="text-body-secondary font-monospace small">ID #18978</span>
+                                    </div>
+                                </div>
+                            
+                                <div class="col col-md-auto flex-grow-1 flex-xl-grow-0 min-w-0">
+                                    <div class="d-flex flex-column gap-1">
+                                        <span class="text-danger font-monospace small fw-bold text-break text-xl-nowrap">[MEMBRO ATIVO // há 2 anos, 3 meses e 4 dias]</span>
+                                        <h1 class="h2 fw-bold text-dark mb-0 lh-1">LEONARDO</h1>
+                                        <span class="text-dark text-opacity-50 fw-bold small">@myspace.leo</span>
+                                        <span class="text-body-secondary fw-bold small mt-2 mt-xl-4 text-break text-xl-nowrap">
+                                            <i class="bi bi-geo-alt-fill"></i> Guarapuava, PR Brasil • Desde mar. 2024
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-xl ms-xl-auto">
+                                    <div class="d-flex flex-column gap-3 align-items-stretch align-items-xl-end">
+                                        <div class="card bg-body border-0 rounded-3 p-3 shadow-sm w-100">
+                                            <span class="text-dark text-opacity-75 small">
+                                                Membro e catalogador obsessivo desde 2023. Keep track of what you hear.
+                                                Arquivando ruídos, polirritmias urbanas e sintetizadores analógicos.
+                                                Inspeção crítica de gravações mastigadas por tape delay e sub-graves de 30Hz a 18kHz.
+                                            </span>
+                                        </div>
+
+                                        <button type="button" class="btn btn-outline-danger font-monospace fw-semibold px-4 py-2 btn-edit-profile">
+                                            <i class="bi bi-pencil"></i> [EDITAR_DADOS]
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Telemetria & Estatísticas -->
+                        <section class="d-flex flex-column gap-3">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    Telemetria &amp; Estatísticas
+                                </h2>
+                                <span class="text-body-tertiary font-monospace small text-uppercase tracking">Tempo real</span>
+                            </div>
+
+                            <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3">
+
+                                <!-- Álbuns -->
+                                <div class="col">
+                                    <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Álbuns</span>
+                                            <i class="bi bi-disc fs-5 text-body-secondary"></i>
+                                        </div>
+                                        <h1 class="h2 fw-bold text-dark mb-0 lh-1">142</h1>
+                                        <span class="font-monospace small fw-semibold text-uppercase text-danger tracking">+18 este mês</span>
+                                    </div>
+                                </div>
+
+                                <!-- Resenhas -->
+                                <div class="col">
+                                    <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Resenhas</span>
+                                            <i class="bi bi-pencil-square fs-5 text-body-secondary"></i>
+                                        </div>
+                                        <h1 class="h2 fw-bold text-dark mb-0 lh-1">27</h1>
+                                        <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Indexadas // SYS</span>
+                                    </div>
+                                </div>
+
+                                <!-- Nota média -->
+                                <div class="col">
+                                    <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Nota média</span>
+                                            <i class="bi bi-star-fill fs-5 text-danger"></i>
+                                        </div>
+                                        <div class="d-flex align-items-baseline gap-2">
+                                            <h1 class="h2 fw-bold text-dark mb-0 lh-1">4.1</h1>
+                                            <span class="font-monospace small text-body-secondary">/ 5.0</span>
+                                        </div>
+                                        <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Curadoria crítica</span>
+                                    </div>
+                                </div>
+
+                                <!-- Favoritos -->
+                                <div class="col">
+                                    <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Favoritos</span>
+                                            <i class="bi bi-heart-fill fs-5 text-danger"></i>
+                                        </div>
+                                        <h1 class="h2 fw-bold text-dark mb-0 lh-1">12</h1>
+                                        <span class="font-monospace small fw-semibold text-uppercase text-danger tracking">Tier essencial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="d-flex flex-column gap-3 gap-md-4">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    Top 4 Favoritos <span class="text-body-secondary font-monospace small d-none d-sm-inline">[TETRAD_ESSENCIAL]</span>
+                                </h2>
+                                <span class="text-danger font-monospace small text-uppercase tracking" href="index.html">[EDITAR]</span>
+                            </div>
+
+
+                            <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 g-md-4">
+                                <!-- Card 1 -->
+                                <div class="col">
+                                    <div class="stat-card d-flex flex-column gap-2 h-100 p-3 p-md-4 rounded-3 border">
+                                        <div class="d-flex flex-column gap-3 align-items-center text-center">
+                                            <img class="fav-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793039042/arca.jpg" alt="Capa do Álbum Arca">                        
+                                        </div>
+                                        <div class="text-danger fs-6">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <h3 class="fs-6 fs-md-5 fw-bold text-dark mb-0 lh-sm text-break">Arca</h3>
+                                        <span class="font-monospace small fw-semibold text-uppercase text-dark tracking text-break">Arca</span>
+                                        <span class="text-danger font-monospace small fw-bold text-break">EXPERIMENTAL // ART POP</span>
+                                    </div>      
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="col">
+                                    <div class="stat-card d-flex flex-column gap-2 h-100 p-3 p-md-4 rounded-3 border">
+                                        <div class="d-flex flex-column gap-3 align-items-center text-center">
+                                            <img class="fav-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793040967/napo.jpg" alt="Capa do Álbum New Amerykah Part One">
+                                        </div>
+                                        <div class="text-danger fs-6">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <h3 class="fs-6 fs-md-5 fw-bold text-dark mb-0 lh-sm text-break">New Amerykah Part One</h3>
+                                        <span class="font-monospace small fw-semibold text-uppercase text-dark tracking text-break">Erykah Badu</span>
+                                        <span class="text-danger font-monospace small fw-bold text-break">R&amp;B // HIP-HOP</span>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 -->
+                                <div class="col">
+                                    <div class="stat-card d-flex flex-column gap-2 h-100 p-3 p-md-4 rounded-3 border">
+                                        <div class="d-flex flex-column gap-3 align-items-center text-center">
+                                            <img class="fav-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793041131/dcsns.jpg" alt="Capa do Álbum Deathconsciousness">
+                                        </div>
+                                        <div class="text-danger fs-6">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <h3 class="fs-6 fs-md-5 fw-bold text-dark mb-0 lh-sm text-break">Deathconsciousness</h3>
+                                        <span class="font-monospace small fw-semibold text-uppercase text-dark tracking text-break">Have a Nice Life</span>
+                                        <span class="text-danger font-monospace small fw-bold text-break">SHOEGAZE // POST-ROCK</span>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4 -->
+                                <div class="col">
+                                    <div class="stat-card d-flex flex-column gap-2 h-100 p-3 p-md-4 rounded-3 border">
+                                        <div class="d-flex flex-column gap-3 align-items-center text-center">
+                                            <img class="fav-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793041343/hifn.jpg" alt="Capa do Álbum how i'm feeling now">
+                                        </div>
+                                        <div class="text-danger fs-6">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <h3 class="fs-6 fs-md-5 fw-bold text-dark mb-0 lh-sm text-break">how i'm feeling now</h3>
+                                        <span class="font-monospace small fw-semibold text-uppercase text-dark tracking text-break">Charli XCX</span>
+                                        <span class="text-danger font-monospace small fw-bold text-break">EXPERIMENTAL // HYPERPOP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="d-flex flex-column gap-3 gap-md-4">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    ÚLTIMAS RESENHAS PUBLICADAS
+                                </h2>
+                                <span class="text-dark font-monospace small text-uppercase tracking d-none d-sm-inline">[LOG_ARCHIVE]</span>
+                            </div>
+
+                            <div class="d-flex flex-column gap-3">
+                                <div class="stat-card1 d-flex flex-column gap-3 p-3 p-md-4 rounded-3 border">
+                                    
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <div class="flex-shrink-0">
+                                            <img class="res-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793044898/dc.jpg" alt="Capa do Álbum Dopamine Chamber">
+                                        </div>
+
+                                        <div class="d-flex flex-column gap-1 gap-md-2 flex-grow-1 min-w-0">
+                                            <div class="text-danger fs-6">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                            <h3 class="fs-5 fs-md-4 fw-bold text-dark mb-0 lh-sm text-break">Dopamine Chamber</h3>
+                                            <span class="font-monospace small fw-semibold text-uppercase text-dark tracking text-break">Fontaine D.C.</span>
+                                            <span class="text-danger font-monospace small fw-bold text-break">ALTERNATIVE-ROCK // ROCK</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex flex-column gap-2">
+                                        <div class="card bg-body border-0 rounded-3 p-3 shadow-sm w-100">
+                                            <span class="text-dark text-opacity-75">
+                                                "Dopamine Chamber, o quinto álbum do Fontaines D.C., é movido por um sadismo intrínseco. A proposta central do disco já 
+                                                está explícita no título, mas o vocalista Grian Chatten é astuto o suficiente para entender que gritar “celulares são ruins” 
+                                                não passa de mais uma encenação — tal como governos que ignoram sistematicamente suas metas de emissão de carbono, ou empresas 
+                                                de inteligência artificial que concordam"...
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-row gap-2">
+                                            <button
+                                                class="btn btn-outline-danger btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-heart me-1"></i> Curtir
+                                            </button>
+                                            <button
+                                                class="btn btn-outline-dark btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-chat me-1"></i>
+                                                Comentar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-card1 d-flex flex-column gap-3 p-3 p-md-4 rounded-3 border">
+                                    
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <div class="flex-shrink-0">
+                                            <img class="res-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793045860/breakeven.jpg" alt="Capa do Álbum Break Even">
+                                        </div>
+
+                                        <div class="d-flex flex-column gap-1 gap-md-2 flex-grow-1 min-w-0">
+                                            <div class="text-danger fs-6">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                            <h3 class="fs-5 fs-md-4 fw-bold text-dark mb-0 lh-sm text-break">Break Even</h3>
+                                            <span class="font-monospace small fw-semibold text-uppercase text-dark tracking text-break">ILLIT</span>
+                                            <span class="text-danger font-monospace small fw-bold text-break">K-POP // ALT-POP</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-column gap-2">
+                                        <div class="card bg-body border-0 rounded-3 p-3 shadow-sm w-100">
+                                            <span class="text-dark text-opacity-75">
+                                                "O ILLIT é um dos maiores grupos da atualidade e cresceu rapidamente. No entanto, em vez de apenas 
+                                                evoluírem com o passar do tempo, elas enfrentam um desafio possivelmente ainda maior: manter o alto padrão 
+                                                estabelecido com SUPER REAL ME e sua faixa principal de sucesso, 'Magnetic'. Embora, na minha opinião, 
+                                                nenhum lançamento tenha superado a estreia delas"...
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-row gap-2">
+                                            <button
+                                                class="btn btn-outline-danger btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-heart me-1"></i> Curtir
+                                            </button>
+                                            <button
+                                                class="btn btn-outline-dark btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-chat me-1"></i>
+                                                Comentar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </main>
+
+    <footer class="bg-body py-4 border-top mt-auto">
+        <div
+            class="container-xl px-3 px-sm-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-secondary text-center text-md-start">
+            <p class="mb-0 text-dark">Copyright &copy; 2026 <span class="footer-t text-danger fw-bold h4">Audiary</span> Inc. All rights reserved</p>
+            <p class="mb-0 text-secondary">Privacy Policy | Terms of Use | Sales and Refunds | Legal | Site Map</p>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+:root {
+    --bs-danger: #FF544B;
+    --bs-danger-rgb: 255, 84, 75;
+    --bs-dark: #1B1B1F;
+    --bs-dark-rgb: 27, 27, 31;
+    --bs-font-sans-serif: "Inter", system-ui, -apple-system, sans-serif;
+    --bs-font-monospace: "JetBrains Mono", monospace;
+    --bs-body-bg: #FFFFFF;
+    --bs-body-secondary-bg: #F2F0F4;
+    --bs-body-tertiary-bg: #EAE8EC;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-display, .navbar-brand, .footer-t {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.bg-body-secondary.py-4.border-top {
+    background-color: #e5e5e5 !important;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #f3f3f3 0%, #eceff7 100%);
+    border-color: rgba(27, 27, 31, 0.08) !important;
+}

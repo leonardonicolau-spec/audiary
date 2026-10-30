@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiary | Álbum</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/album.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white border-opacity-10 py-3"
+            data-bs-theme="dark">
+            <div class="container-xl px-3 px-sm-4">
+                <a class="navbar-brand fw-bold text-danger fs-4" href="index.html">Audiary</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul
+                        class="navbar-nav ms-auto align-items-lg-center font-monospace nav-underline small pt-2 pt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 fw-semibold" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="user.html">Usuário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-danger" aria-current="page" href="tapin.html">Explorar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="index.html#cadastro">Cadastre-se</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--
+        HOOKS PARA O JS (Last.fm album.getInfo):
+        data-album="..."  -> elementos que recebem texto/atributo da API
+        A página será chamada como album.html?artist=Tim+Hecker&album=Radio+Amor
+        (o Last.fm identifica o álbum por artista + nome, ou por mbid)
+    -->
+    <main class="py-4 py-md-5 bg-body">
+        <div class="container-xl px-3 px-sm-5">
+            <div class="d-flex flex-column gap-4">
+
+                <!-- ======================= CABEÇALHO DO ÁLBUM ======================= -->
+                <section class="stat-card1 border rounded-3 p-3 p-md-4 shadow-sm">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                        <a href="tapin.html"
+                            class="text-dark text-opacity-75 font-monospace small text-uppercase tracking text-decoration-none">
+                            <i class="bi bi-arrow-left me-1"></i> Voltar para explorar
+                        </a>
+                        <span class="text-danger font-monospace small text-uppercase tracking d-none d-sm-inline">[ALBUM_LOG]</span>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- capa -->
+                        <div class="col-12 col-md-5 col-lg-4">
+                            <img class="fav-album album-cover rounded-3 shadow-sm mx-auto d-block"
+                                data-album="cover"
+                                src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793193075/LAUGHXXXX.jpg"
+                                alt="Capa do álbum Lux">
+                        </div>
+
+                        <!-- informações -->
+                        <div class="col-12 col-md-7 col-lg-8 d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1">
+                                <span class="text-danger font-monospace small text-uppercase tracking" data-album="tags">EXPERIMENTAL // ART-POP</span>
+                                <h1 class="display-5 fw-bold text-dark mb-0 lh-1 text-break" data-album="title">Lux</h1>
+                                <span class="font-monospace fw-semibold text-uppercase text-dark tracking" data-album="artist">Rosalia</span>
+                                <span class="font-monospace small text-dark text-opacity-50" data-album="year">2025</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-3 flex-wrap">
+                                <div class="text-danger fs-5" data-album="rating" aria-label="Nota média: 4 de 5">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <span class="font-monospace small text-dark text-opacity-50">4.0 // média da comunidade</span>
+                            </div>
+
+                            <!-- botões de ação: US04, US07, US08 -->
+                            <div class="d-flex flex-wrap gap-2 mt-auto">
+                                <a href="#registro" class="btn btn-danger btn-sm font-monospace fw-bold">
+                                    <i class="bi bi-headphones me-1"></i> Marcar como ouvido
+                                </a>
+                                <button type="button" class="btn btn-outline-dark btn-sm font-monospace fw-semibold bg-white"
+                                    id="btn-listenlist">
+                                    <i class="bi bi-bookmark-plus me-1"></i> Listenlist
+                                </button>
+                                <button type="button" class="btn btn-outline-danger btn-sm font-monospace fw-semibold bg-white"
+                                    id="btn-favorito" aria-pressed="false">
+                                    <i class="bi bi-heart me-1"></i> Favoritar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ======================= CONTEÚDO ======================= -->
+                <section class="row g-4">
+
+                    <!-- COLUNA ESQUERDA: sobre + seu registro + resenhas -->
+                    <div class="col-12 col-lg-8 d-flex flex-column gap-4">
+
+                        <!-- Sobre (wiki.summary do Last.fm) -->
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1">
+                                <span class="text-danger font-monospace small text-uppercase tracking">DADOS DO ARQUIVO</span>
+                                <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    SOBRE O ÁLBUM
+                                </h2>
+                            </div>
+                            <div class="stat-card1 border rounded-3 p-3 p-md-4">
+                                <p class="text-dark mb-0 text-break" data-album="about">
+                                    Lux é o quarto álbum de estúdio da cantora espanhola Rosalía, lançado em 7 de novembro de 2025 através da Columbia Records. 
+                                    É o seu primeiro álbum completo desde Motomami, de 2022. O disco contém dezoito faixas em suas edições físicas, enquanto as digitais omitem três destas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Seu registro (US04, US05, US06) -->
+                        <div class="d-flex flex-column gap-3" id="registro">
+                            <div class="d-flex flex-column gap-1">
+                                <span class="text-danger font-monospace small text-uppercase tracking">MEMBRO // DIÁRIO</span>
+                                <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    SEU REGISTRO
+                                </h2>
+                            </div>
+
+                            <form id="form-registro" class="stat-card1 border rounded-3 p-3 p-md-4 d-flex flex-column gap-3" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="data-audicao" class="form-label fw-bold font-monospace small text-black mb-1">DATA DA AUDIÇÃO</label>
+                                        <input type="date" id="data-audicao" name="data-audicao" class="form-control py-2" required>
+                                        <div class="invalid-feedback font-monospace small">Informe a data em que você ouviu o álbum.</div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-6">
+                                        <span class="form-label fw-bold font-monospace small text-black mb-1 d-block" id="label-nota">SUA NOTA</span>
+                                        <div class="d-flex align-items-center gap-1 py-1" role="group" aria-labelledby="label-nota" id="nota-estrelas">
+                                            <button type="button" class="star-btn" data-nota="1" aria-label="1 estrela"><i class="bi bi-star"></i></button>
+                                            <button type="button" class="star-btn" data-nota="2" aria-label="2 estrelas"><i class="bi bi-star"></i></button>
+                                            <button type="button" class="star-btn" data-nota="3" aria-label="3 estrelas"><i class="bi bi-star"></i></button>
+                                            <button type="button" class="star-btn" data-nota="4" aria-label="4 estrelas"><i class="bi bi-star"></i></button>
+                                            <button type="button" class="star-btn" data-nota="5" aria-label="5 estrelas"><i class="bi bi-star"></i></button>
+                                        </div>
+                                        <input type="hidden" id="nota" name="nota" value="">
+                                        <div class="text-danger font-monospace small d-none" id="nota-erro">Escolha uma nota de 1 a 5.</div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="resenha" class="form-label fw-bold font-monospace small text-black mb-1">
+                                        RESENHA <span class="text-dark text-opacity-50 fw-normal">(opcional)</span>
+                                    </label>
+                                    <textarea id="resenha" name="resenha" class="form-control" rows="4" maxlength="1000"
+                                        placeholder="O que você achou do álbum?"></textarea>
+                                    <div class="text-end font-monospace small text-dark text-opacity-50 mt-1">
+                                        <span id="contador-resenha">0</span>/1000
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button type="submit" class="btn btn-danger btn-sm font-monospace fw-bold px-3">
+                                        [SALVAR REGISTRO]
+                                    </button>
+                                    <button type="reset" class="btn btn-outline-dark btn-sm font-monospace fw-semibold bg-white">
+                                        Limpar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Resenhas da comunidade -->
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1">
+                                <span class="text-danger font-monospace small text-uppercase tracking">DISCUSSÃO TÉCNICA</span>
+                                <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    RESENHAS DESTE ÁLBUM
+                                </h2>
+                            </div>
+
+                            <!-- o JS vai gerar estes cards a partir do JSON Server -->
+                            <div id="lista-resenhas" class="d-flex flex-column gap-3">
+                                <article class="stat-card1 d-flex flex-column gap-2 p-3 p-md-4 rounded-3 border">
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                        <div class="d-flex flex-row gap-2">
+                                            <span class="avatar-sm rounded-circle bg-danger flex-shrink-0"></span>
+                                            <span class="font-monospace fw-semibold small text-dark">@demonio_666hell</span>
+                                        </div>
+                                        <div class="text-danger fs-6">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-dark mt-2 mb-0 text-break tracking">
+                                        "Uma das mixagens mais agressivas e eficientes da década. Os sintetizadores modulares em 'Berghain' criam um muro de som impecável." 
+                                    </p>
+                                    <span class="text-dark font-monospace text-opacity-50 small">24.10.26 // 11:42</span>
+
+                                    <hr class="my-2">
+
+                                    <div class="d-flex flex-row gap-2">
+                                        <button class="btn btn-outline-danger btn-sm font-monospace fw-semibold w-100 bg-white">
+                                            <i class="bi bi-heart me-1"></i> Curtir
+                                        </button>
+                                        <button class="btn btn-outline-dark btn-sm font-monospace fw-semibold w-100 bg-white">
+                                            <i class="bi bi-chat me-1"></i> Comentar
+                                        </button>
+                                    </div>
+                                </article>
+
+                                <article class="stat-card1 d-flex flex-column gap-2 p-3 p-md-4 rounded-3 border">
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                        <div class="d-flex flex-row gap-2">
+                                            <span class="avatar-sm rounded-circle bg-danger flex-shrink-0"></span>
+                                            <span class="font-monospace fw-semibold small text-dark">@noisefloor</span>
+                                        </div>
+                                        <div class="text-danger fs-6">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-dark mt-2 mb-0 text-break tracking">
+                                        "Curva de equalização cirúrgica na região média. A compressão vocal mantém a energia crua sem cansar a audição crítica em fones planos." 
+                                    </p>
+                                    <span class="text-dark font-monospace text-opacity-50 small">22.10.26 // 23:08</span>
+
+                                    <hr class="my-2">
+
+                                    <div class="d-flex flex-row gap-2">
+                                        <button class="btn btn-outline-danger btn-sm font-monospace fw-semibold w-100 bg-white">
+                                            <i class="bi bi-heart me-1"></i> Curtir
+                                        </button>
+                                        <button class="btn btn-outline-dark btn-sm font-monospace fw-semibold w-100 bg-white">
+                                            <i class="bi bi-chat me-1"></i> Comentar
+                                        </button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COLUNA DIREITA: stats + tracklist -->
+                    <div class="col-12 col-lg-4 d-flex flex-column gap-4">
+
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1">
+                                <span class="text-danger font-monospace small text-uppercase tracking">GLOBAL_STATS</span>
+                                <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    NÚMEROS
+                                </h2>
+                            </div>
+
+                            <div class="row row-cols-2 row-cols-lg-1 g-2">
+                                <div class="col">
+                                    <div class="stat-card1 h-100 p-3 rounded-3 border">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="text-danger font-monospace small fw-semibold text-uppercase tracking">SEC // 01</span>
+                                            <i class="bi bi-people text-body-secondary"></i>
+                                        </div>
+                                        <div class="h2 fw-bold text-dark mb-0 lh-1 font-display" data-album="listeners">48.2K</div>
+                                        <span class="font-monospace small fw-semibold text-uppercase text-dark text-opacity-50 tracking">Ouvintes</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="stat-card1 h-100 p-3 rounded-3 border">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="text-danger font-monospace small fw-semibold text-uppercase tracking">SEC // 02</span>
+                                            <i class="bi bi-headphones text-body-secondary"></i>
+                                        </div>
+                                        <div class="h2 fw-bold text-dark mb-0 lh-1 font-display" data-album="playcount">412K</div>
+                                        <span class="font-monospace small fw-semibold text-uppercase text-dark text-opacity-50 tracking">Escutas</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1">
+                                <span class="text-danger font-monospace small text-uppercase tracking">ARQUIVO // FAIXAS</span>
+                                <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    TRACKLIST
+                                </h2>
+                            </div>
+
+                            <!-- o JS gera um <li> por faixa (tracks.track[]: name, duration, @attr.rank) -->
+                            <ol class="stat-card1 border rounded-3 list-unstyled mb-0 font-monospace small px-3 py-1" id="lista-faixas">
+                                <li class="track-row d-flex justify-content-between align-items-center gap-3 py-2 border-bottom">
+                                    <span class="d-flex gap-3 text-dark">
+                                        <span class="text-danger fw-semibold">01</span>
+                                        <span>Sexo, Violencia y Llantas</span>
+                                    </span>
+                                    <span class="text-dark text-opacity-50">3:15</span>
+                                </li>
+                                <li class="track-row d-flex justify-content-between align-items-center gap-3 py-2 border-bottom">
+                                    <span class="d-flex gap-3 text-dark">
+                                        <span class="text-danger fw-semibold">02</span>
+                                        <span>Reliquia</span>
+                                    </span>
+                                    <span class="text-dark text-opacity-50">2:50</span>
+                                </li>
+                                <li class="track-row d-flex justify-content-between align-items-center gap-3 py-2 border-bottom">
+                                    <span class="d-flex gap-3 text-dark">
+                                        <span class="text-danger fw-semibold">03</span>
+                                        <span>Divinize</span>
+                                    </span>
+                                    <span class="text-dark text-opacity-50">4:10</span>
+                                </li>
+                                <li class="track-row d-flex justify-content-between align-items-center gap-3 py-2 border-bottom">
+                                    <span class="d-flex gap-3 text-dark">
+                                        <span class="text-danger fw-semibold">04</span>
+                                        <span>Porcelana</span>
+                                    </span>
+                                    <span class="text-dark text-opacity-50">3:45</span>
+                                </li>
+                                <li class="track-row d-flex justify-content-between align-items-center gap-3 py-2">
+                                    <span class="d-flex gap-3 text-dark">
+                                        <span class="text-danger fw-semibold">05</span>
+                                        <span>Mio Cristo Piange Diamanti</span>
+                                    </span>
+                                    <span class="text-dark text-opacity-50">3:30</span>
+                                </li>
+                                <div class="d-flex flex-row gap-1 mt-3 mb-3 justify-items-between align-items-center">
+                                    <hr class="flex-grow-1 m-0">
+                                    <span class="text-danger font-monospace small tracking">+10 Faixas</span>
+                                    <hr class="flex-grow-1 m-0">
+                                </div>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-body py-4 border-top mt-auto">
+        <div
+            class="container-xl px-3 px-sm-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-secondary">
+            <p class="mb-0 text-dark">Copyright &copy; 2026 <span class="footer-t text-danger fw-bold h4">Audiary</span> Inc. All rights reserved</p>
+            <p class="mb-0 text-secondary">Privacy Policy | Terms of Use | Sales and Refunds | Legal | Site Map</p>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
