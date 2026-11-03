@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="css/tapin.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 page-tapin">
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white border-opacity-10 py-3"
@@ -43,7 +43,7 @@
                             <a class="nav-link active text-danger" aria-current="page" href="#">Explorar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50" href="index.html#cadastro">Cadastre-se</a>
+                            <a class="nav-link text-white-50" href="login.html?modo=cadastro">Cadastre-se</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white-50" href="login.html">Login</a>
@@ -66,7 +66,7 @@
                                     <span class="text-danger font-monospace small text-uppercase tracking d-none d-sm-inline">[SYS_ARCHIVE]</span>
                                 </div>
 
-                                <div class="input-group mb-3" style="max-width: auto;">
+                                <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">
                                         <i class="bi bi-search"></i>
                                     </span>
@@ -78,14 +78,14 @@
                                         <div class="card bg-dark">
                                             <span class="text-white font-monospace small text-uppercase m-1">[TODOS]</span>
                                         </div>
-                                        <div class="card bg-secondary-body ">
-                                            <span class="text-dark font-opacity-50 font-monospace small text-uppercase m-1">ÁLBUNS</span>
+                                        <div class="card bg-body-secondary">
+                                            <span class="text-dark text-opacity-50 font-monospace small text-uppercase m-1">ÁLBUNS</span>
                                         </div>
-                                        <div class="card bg-secondary-body ">
-                                            <span class="text-dark font-opacity-50 font-monospace small text-uppercase m-1">ARTISTAS</span>
+                                        <div class="card bg-body-secondary">
+                                            <span class="text-dark text-opacity-50 font-monospace small text-uppercase m-1">ARTISTAS</span>
                                         </div>
-                                        <div class="card bg-secondary-body ">
-                                            <span class="text-dark font-opacity-50 font-monospace small text-uppercase m-1">GÊNEROS</span>
+                                        <div class="card bg-body-secondary">
+                                            <span class="text-dark text-opacity-50 font-monospace small text-uppercase m-1">GÊNEROS</span>
                                         </div>
                                     </div>
 
@@ -100,7 +100,7 @@
                         <section class="d-flex flex-column gap-3">
                             <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
                                 <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    <span class="bg-danger d-inline-block rounded-1 dot"></span>
                                     RECENTES DE AMIGOS
                                 </h2>
                                 <span class="text-body-tertiary font-monospace small text-uppercase tracking">Tempo real</span>
@@ -207,7 +207,7 @@
                                         <div class="d-flex flex-row mt-3 gap-3">
                                             <img class="res-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793132902/avisita.jpg" alt="Capa do Álbum A Visita">
                                             <div class="d-flex flex-column gap-1">
-                                                <h2 class="h6 fw-bold text-dark mb-0 d-flex align-items-center gap-2 tracking">A Visíta</h2>
+                                                <h2 class="h6 fw-bold text-dark mb-0 d-flex align-items-center gap-2 tracking">A Visita</h2>
                                                 <span class="text-dark mb-0 text-opacity-50 m-0 lh-0 small">Katy da Voz e as Abusadas</span>
                                                 <div class="text-danger fs-6">
                                                     <i class="bi bi-star-fill"></i>
@@ -234,7 +234,7 @@
                                 <span class="text-danger font-monospace small text-uppercase tracking">CURADORIA // SEMANA 42</span>
                                 <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
                                     <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                        <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                        <span class="bg-danger d-inline-block rounded-1 dot"></span>
                                         ÁLBUNS EM DESTAQUE
                                     </h2>
                                     <span class="text-body-tertiary font-monospace small text-uppercase tracking">ver tudo (81) -></span>
@@ -267,7 +267,6 @@
                                                 <span class="text-dark font-monospace fw-bold tracking small">2.4k Escutas</span>
                                             </div>
 
-                                            <span class="text-dark font-monospace small text-opacity-50">093 BPM</span>
                                         </div>
                                     </div>      
                                 </div>
@@ -282,7 +281,7 @@
                                             <i class="bi bi-star-fill"></i>
                                             <i class="bi bi-star-fill"></i>
                                             <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-half"></i>
+                                            <i class="bi bi-star"></i>
                                         </div>
                                         <h3 class="fs-6 fs-md-5 fw-bold text-dark mb-0 lh-sm text-break">Music, Fashion, Film</h3>
                                         <span class="font-monospace small fw-semibold text-uppercase text-dark tracking text-break">Charli XCX</span>
@@ -293,8 +292,6 @@
                                                 <i class="text-danger bi bi-headphones"></i>
                                                 <span class="text-dark font-monospace fw-bold tracking small">5.2k Escutas</span>
                                             </div>
-
-                                            <span class="text-dark font-monospace small text-opacity-50">092 BPM</span>
                                         </div>
                                     </div>
                                 </div>
@@ -321,8 +318,6 @@
                                                 <i class="text-danger bi bi-headphones"></i>
                                                 <span class="text-dark font-monospace fw-bold tracking small">2.2k Escutas</span>
                                             </div>
-
-                                            <span class="text-dark font-monospace small text-opacity-50">182 BPM</span>
                                         </div>
                                     </div>
                                 </div>
@@ -331,26 +326,24 @@
                                 <div class="col">
                                     <div class="stat-card d-flex flex-column gap-2 h-100 p-3 p-md-4 rounded-3 border">
                                         <div class="d-flex flex-column gap-3 align-items-center text-center">
-                                            <img class="fav-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793193077/saved.jpg" alt="Capa do Álbum SAVED!">
+                                            <img class="fav-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793475404/popstar.jpg" alt="Capa do Álbum Popstar">
                                         </div>
                                         <div class="text-danger fs-6">
                                             <i class="bi bi-star-fill"></i>
                                             <i class="bi bi-star-fill"></i>
                                             <i class="bi bi-star-fill"></i>
                                             <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star"></i>
+                                            <i class="bi bi-star-half"></i>
                                         </div>
-                                        <h3 class="fs-6 fs-md-5 fw-bold text-dark mb-0 lh-sm text-break">SAVED!</h3>
-                                        <span class="font-monospace small fw-semibold text-uppercase text-dark tracking text-break">Rev. Kristin Michael Hayter</span>
-                                        <span class="text-danger font-monospace small fw-bold text-break">GOSPEL // NOISE</span>
+                                        <h3 class="fs-6 fs-md-5 fw-bold text-dark mb-0 lh-sm text-break">Popstar</h3>
+                                        <span class="font-monospace small fw-semibold text-uppercase text-dark tracking text-break">Tinashe</span>
+                                        <span class="text-danger font-monospace small fw-bold text-break">R&amp;B // POP</span>
 
                                         <div class="card d-flex justify-content-between align-items-center mt-2 flex-wrap flex-sm-row gap-2 h-100 p-2 rounded-3 border">
                                             <div class="d-flex flex-row gap-2">
                                                 <i class="text-danger bi bi-headphones"></i>
-                                                <span class="text-dark font-monospace fw-bold tracking small">969 Escutas</span>
+                                                <span class="text-dark font-monospace fw-bold tracking small">5.3k Escutas</span>
                                             </div>
-
-                                            <span class="text-dark font-monospace small text-opacity-50">080 BPM</span>
                                         </div>
                                     </div>
                                 </div>
@@ -358,12 +351,70 @@
                         </section>
 
                         <section class="row g-4">
+                            <div class="d-flex flex-column gap-2">
+                                <div class="d-flex flex-column gap-1">
+                                    <span class="text-danger font-monospace small text-uppercase tracking">GLOBAL_STATS</span>
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                        <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                            <span class="bg-danger d-inline-block rounded-1 dot"></span>
+                                            GÊNEROS EM ALTA
+                                        </h2>
+                                    </div>
+                                </div>
+
+                                <div class="row row-cols-2 row-cols-sm-4 g-2">
+                                    <div class="col">
+                                        <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span class="text-danger font-monospace small fw-semibold text-uppercase tracking">SEC // 01</span>
+                                                <i class="bi bi-soundwave text-body-secondary"></i>
+                                            </div>
+                                            <h3 class="stat-title fw-bold text-dark mb-1 lh-1">EXPERIMENTAL</h3>
+                                            <span class="font-monospace small fw-semibold text-uppercase text-dark text-opacity-50 tracking">1.2k REGISTROS</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span class="text-danger font-monospace small fw-semibold text-uppercase tracking">SEC // 02</span>
+                                                <i class="bi bi-lightning text-body-secondary"></i>
+                                            </div>
+                                            <h3 class="stat-title fw-bold text-dark mb-1 lh-1">GLITCH POP</h3>
+                                            <span class="font-monospace small fw-semibold text-uppercase text-dark text-opacity-50 tracking">840 REGISTROS</span>
+                                        </div>
+                                    </div>                                    
+                                
+                                    <div class="col">
+                                        <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span class="text-danger font-monospace small fw-semibold text-uppercase tracking">SEC // 03</span>
+                                                <i class="bi bi-funnel text-body-secondary"></i>
+                                            </div>
+                                            <h3 class="stat-title fw-bold text-dark mb-1 lh-1">AMBIENT</h3>
+                                            <span class="font-monospace small fw-semibold text-uppercase text-dark text-opacity-50 tracking">2.4k REGISTROS</span>
+                                        </div>
+                                    </div>    
+
+                                    <div class="col">
+                                        <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span class="text-danger font-monospace small fw-semibold text-uppercase tracking">SEC // 04</span>
+                                                <i class="bi bi-sliders2-vertical text-body-secondary"></i>
+                                            </div>
+                                            <h3 class="stat-title fw-bold text-dark mb-1 lh-1">IDM / MODULAR</h3>
+                                            <span class="font-monospace small fw-semibold text-uppercase text-dark text-opacity-50 tracking">610 REGISTROS</span>
+                                        </div>
+                                    </div>   
+                                </div> 
+                            </div>
+
                             <div class="d-flex flex-wrap flex-sm-column gap-3">
                                 <div class="d-flex flex-column gap-1">
                                     <span class="text-danger font-monospace small text-uppercase tracking">DISCUSSÃO TÉCNICA</span>
                                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
                                         <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                            <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                            <span class="bg-danger d-inline-block rounded-1 dot"></span>
                                             RESENHAS RECENTES
                                         </h2>
                                     </div>
@@ -470,64 +521,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="d-flex flex-wrap flex-sm-column gap-2">
-                                <div class="d-flex flex-column gap-1">
-                                    <span class="text-danger font-monospace small text-uppercase tracking">GLOBAL_STATS</span>
-                                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-                                        <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                            <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
-                                            GÊNEROS EM ALTA
-                                        </h2>
-                                    </div>
-                                </div>
-
-                                <div class="row row-cols-2 g-2">
-                                    <div class="col">
-                                        <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
-                                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <span class="text-danger font-monospace small fw-semibold text-uppercase tracking">SEC // 01</span>
-                                                <i class="bi bi-soundwave text-body-secondary"></i>
-                                            </div>
-                                            <h1 class="h2 fw-bold text-dark mb-0 lh-1" style="font-size: clamp(1.1rem, 5vw, 2rem); overflow-wrap: anywhere;">EXPERIMENTAL</h1>
-                                            <span class="font-monospace small fw-semibold text-uppercase text-dark text-opacity-50 tracking">1.2k REGISTROS</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
-                                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <span class="text-danger font-monospace small fw-semibold text-uppercase tracking">SEC // 02</span>
-                                                <i class="bi bi-lightning text-body-secondary"></i>
-                                            </div>
-                                            <h1 class="h2 fw-bold text-dark mb-0 lh-1">GLITCH POP</h1>
-                                            <span class="font-monospace small fw-semibold text-uppercase text-dark text-opacity-50 tracking">840 REGISTROS</span>
-                                        </div>
-                                    </div>                                    
-                                
-                                    <div class="col">
-                                        <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
-                                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <span class="text-danger font-monospace small fw-semibold text-uppercase tracking">SEC // 03</span>
-                                                <i class="bi bi-funnel text-body-secondary"></i>
-                                            </div>
-                                            <h1 class="h2 fw-bold text-dark mb-0 lh-1">AMBIENT</h1>
-                                            <span class="font-monospace small fw-semibold text-uppercase text-dark text-opacity-50 tracking">2.4k REGISTROS</span>
-                                        </div>
-                                    </div>    
-
-                                    <div class="col">
-                                        <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
-                                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <span class="text-danger font-monospace small fw-semibold text-uppercase tracking">SEC // 04</span>
-                                                <i class="bi bi-sliders2-vertical text-body-secondary"></i>
-                                            </div>
-                                            <h1 class="h2 fw-bold text-dark mb-0 lh-1">IDM / MODULAR</h1>
-                                            <span class="font-monospace small fw-semibold text-uppercase text-dark text-opacity-50 tracking">610 REGISTROS</span>
-                                        </div>
-                                    </div>   
-                                </div> 
                             </div>
                         </section>
                     </div>

@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 page-index">
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white border-opacity-10 py-3"
@@ -42,7 +42,7 @@
                             <a class="nav-link text-white-50" href="tapin.html">Explorar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50" href="#cadastro">Cadastre-se</a>
+                            <a class="nav-link text-white-50" href="login.html?modo=cadastro">Cadastre-se</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white-50" href="login.html">Login</a>
@@ -54,8 +54,13 @@
     </header>
 
     <main>
-        <section class="position-relative overflow-hidden d-flex align-items-center py-5 bg-dark hero-section" style="min-height: 420px;">
-            
+        <section class="position-relative overflow-hidden d-flex align-items-center py-5 hero-section">
+            <video autoplay muted loop playsinline
+                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover pe-none z-0">
+                <source
+                    src="https://res.cloudinary.com/lpmoxxkl/video/upload/v1792365358/YTDown.com_YouTube_underscores-The-Peace_Media_Gf-fCJ6TkRU_001_1080p.mp4"
+                    type="video/mp4">
+            </video>
             <div class="position-absolute top-0 start-0 w-100 h-100 z-1 pe-none hero-overlay"></div>
 
             <div class="container-xl position-relative z-2 px-3 px-sm-4 py-4 py-lg-5">
@@ -64,18 +69,14 @@
                         KEEP TRACK OF WHAT YOU HEAR --
                     </h1>
 
-                    <p class="lead text-white mb-4 col-12 col-md-10" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);">
+                    <p class="lead text-white mb-4 col-12 col-md-10 hero-lead">
                         Guarde e avalie os álbuns que você ouve no seu dia a dia.
                         Seu diário musical pessoal com telemetria sônica precisa e estética industrial.
                     </p>
 
                     <div class="d-flex flex-column flex-sm-row gap-3">
-                        <a href="#cadastro">
-                            <button class="btn btn-danger btn-lg w-100 font-monospace fw-semibold px-4 py-2 text-lowercase">cadastre-se</button>
-                        </a>
-                        <a href="login.html">
-                            <button class="btn btn-secondary btn-lg font-monospace fw-semibold px-4 py-2 text-lowercase">login</button>
-                        </a>
+                        <a href="login.html?modo=cadastro" class="btn btn-danger btn-lg font-monospace fw-semibold px-4 py-2 text-lowercase">cadastre-se</a>
+                        <a href="login.html" class="btn btn-secondary btn-lg font-monospace fw-semibold px-4 py-2 text-lowercase">login</a>
                     </div>
                 </div>
             </div>
@@ -87,7 +88,7 @@
                     <div class="col-12 col-xl-7">
                         <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
                             <h2 class="h5 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                 <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> AUDIÇÃO EM DESTAQUE
+                                 <span class="bg-danger d-inline-block rounded-1 dot"></span> AUDIÇÃO EM DESTAQUE
                             </h2>
                             <span class="text-secondary fw-bold font-monospace small">critic_selection // curated</span>
                         </div>
@@ -97,8 +98,7 @@
                                 <div class="flex-shrink-0 text-center text-sm-start">
                                     <img class="album-c rounded-3 shadow-sm"
                                         src="https://res.cloudinary.com/lpmoxxkl/image/upload/v1792112066/Selected_Ambient_Works_85-92.jpg"
-                                        alt="Capa do álbum Selected Ambient Works 85-92 - Aphex Twin"
-                                        style="width: 100%; max-width: 260px; aspect-ratio: 1 / 1; object-fit: cover;">
+                                        alt="Capa do álbum Selected Ambient Works 85-92 - Aphex Twin">
                                 </div>
 
                                 <div class="d-flex flex-column flex-grow-1 min-w-0">
@@ -140,19 +140,17 @@
                     <div class="col-12 col-xl-5">
                         <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
                             <h2 class="h5 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                 <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> ÁLBUNS EM ALTA
+                                 <span class="bg-danger d-inline-block rounded-1 dot"></span> ÁLBUNS EM ALTA
                             </h2>
                             <span class="text-secondary fw-bold font-monospace small">trending // weekly</span>
                         </div>
 
-                        <div class="stat-card border shadow-sm rounded-3 p-3 p-md-4 h-100 card-scroll"
-                            style="min-height: 330px;">
+                        <div class="stat-card border shadow-sm rounded-3 p-3 p-md-4 h-100 card-scroll">
                             <div class="card-body p-0 d-flex flex-column">
                                 <div class="d-flex flex-column gap-3">
                                     <div class="card bg-body-tertiary border rounded-2 p-3 shadow-sm h-100">
                                         <div class="d-flex flex-row gap-3">
-                                            <img class="album-cover rounded-3 shadow-sm"
-                                                style="  width: 6rem; max-width: 260px; aspect-ratio: 1 / 1; object-fit: cover;"
+                                            <img class="album-cover album-c-sm rounded-3 shadow-sm"
                                                 src="https://res.cloudinary.com/lpmoxxkl/image/upload/v1792535318/heart.jpg">
                                             <div class="d-flex flex-column">
                                                 <h3 class="h5 fw-bold text-dark mb-1 text-break">♡ (Heart)</h3>
@@ -165,8 +163,7 @@
 
                                     <div class="card bg-body-tertiary border rounded-2 p-3 shadow-sm h-100">
                                         <div class="d-flex flex-row gap-3">
-                                            <img class="album-cover rounded-3 shadow-sm"
-                                                style="  width: 6rem; max-width: 260px; aspect-ratio: 1 / 1; object-fit: cover;"
+                                            <img class="album-cover album-c-sm rounded-3 shadow-sm"
                                                 src="https://res.cloudinary.com/lpmoxxkl/image/upload/v1792537104/carranca.jpg">
                                             <div class="d-flex flex-column">
                                                 <h3 class="h5 fw-bold text-dark mb-1 text-break">Carranca</h3>
@@ -179,8 +176,7 @@
 
                                     <div class="card bg-body-tertiary border rounded-2 p-3 shadow-sm h-100">
                                         <div class="d-flex flex-row gap-3">
-                                            <img class="album-cover rounded-3 shadow-sm"
-                                                style="  width: 6rem; max-width: 260px; aspect-ratio: 1 / 1; object-fit: cover;"
+                                            <img class="album-cover album-c-sm rounded-3 shadow-sm"
                                                 src="https://res.cloudinary.com/lpmoxxkl/image/upload/v1792537394/o.jpg">
                                             <div class="d-flex flex-column">
                                                 <h3 class="h5 fw-bold text-dark mb-1 text-break">Ö</h3>
@@ -193,8 +189,7 @@
 
                                     <div class="card bg-body-tertiary border rounded-2 p-3 shadow-sm h-100">
                                         <div class="d-flex flex-row gap-3">
-                                            <img class="album-cover rounded-3 shadow-sm"
-                                                style="  width: 6rem; max-width: 260px; aspect-ratio: 1 / 1; object-fit: cover;"
+                                            <img class="album-cover album-c-sm rounded-3 shadow-sm"
                                                 src="https://res.cloudinary.com/lpmoxxkl/image/upload/v1792537824/u.jpg">
                                             <div class="d-flex flex-column">
                                                 <h3 class="h5 fw-bold text-dark mb-1 text-break">U</h3>
@@ -204,7 +199,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -212,7 +206,7 @@
                 </div>
             </div>
         </section>
-
+w
         <section class="bg-body-secondary position-relative overflow-hidden d-flex align-items-center py-5" id="manifesto">
             <div class="container-xl px-3 px-sm-4">
                 <div class="row g-4 align-items-center">
@@ -220,18 +214,18 @@
 
                         <div class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
                             <span class="text-danger fw-bold font-monospace small">// MANIFESTO TÉCNICO</span>
-                            <h1 class="h2 fw-bold text-dark mb-0 d-flex align-items-center gap-2">A DIFERENÇA ENTRE
-                                TOCAR E LEMBRAR</h1>
+                            <h2 class="h2 fw-bold text-dark mb-0 d-flex align-items-center gap-2">A DIFERENÇA ENTRE
+                                TOCAR E LEMBRAR</h2>
                         </div>
 
-                        <div class="col-12 col-xl-14">
+                        <div class="col-12 col-xl-12">
                             <div class="d-flex flex-column flex-sm-row gap-4 align-items-center">
                                 <div
                                     class="card d-flex flex-column gap-3 bg-dark border-0 rounded-3 p-3 shadow-sm h-100">
                                     <div
                                         class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
                                         <span class="text-danger fw-bold font-monospace small">
-                                             <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> [AUDIARY PROTOCOL //
+                                             <span class="bg-danger d-inline-block rounded-1 dot"></span> [AUDIARY PROTOCOL //
                                             spec.001]
                                         </span>
                                         <h2 class="h5 fw-bold text-white mb-0 d-flex align-items-center gap-2">
@@ -263,7 +257,7 @@
                                     <div
                                         class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
                                         <span class="text-danger fw-bold font-monospace small">
-                                             <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> [AUDIARY PROTOCOL //
+                                             <span class="bg-danger d-inline-block rounded-1 dot"></span> [AUDIARY PROTOCOL //
                                             spec.002]
                                         </span>
                                         <h2 class="h5 fw-bold text-black mb-0 d-flex align-items-center gap-2">
@@ -304,7 +298,7 @@
 
                         <div class="d-flex flex-column align-items-start justify-content-between gap-2 mb-3">
                             <span class="text-danger font-monospace small">// TELEMETRIA GLOBAL</span>
-                            <h1 class="h2 fw-bold text-dark mb-0 d-flex align-items-center gap-2">ESTADO DA REDE</h1>
+                            <h2 class="h2 fw-bold text-dark mb-0 d-flex align-items-center gap-2">ESTADO DA REDE</h2>
                         </div>
 
                         <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
@@ -358,9 +352,9 @@
                             <div class="stat-card d-flex flex-column gap-0 bg-white border rounded-3 p-3 shadow-sm h-100">
                                     <div class="d-flex flex-column align-items-start justify-content-between gap-1 mb-3">
                                         <span class="text-danger fw-bold font-monospace small">
-                                             <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> [AUDIARY PROTOCOL //spec.003]
+                                             <span class="bg-danger d-inline-block rounded-1 dot"></span> [AUDIARY PROTOCOL //spec.003]
                                         </span>
-                                        <h2 class="h5 fw-bold text-black mb-0 d-flex align-items-center tracking' gap-2">MODULOS DE CAMPO</h2>
+                                        <h2 class="h5 fw-bold text-black mb-0 d-flex align-items-center tracking gap-2">MÓDULOS DE CAMPO</h2>
                                     </div>
 
                                 <div class="d-flex flex-column gap-3">
@@ -417,7 +411,7 @@
             </div>
         </section>
 
-        <section class="bg-body-bg position-relative overflow-hidden d-flex align-items-center py-5" id="cadastro">
+        <section class="position-relative overflow-hidden d-flex align-items-center py-5" id="cadastro">
             <div class="container-xl px-3 px-sm-4">
                 <div class="row g-4 align-items-center">
                     <div class="row g-3 align-items-center">
@@ -428,11 +422,20 @@
 
                                 <div class="w-100 d-flex flex-column gap-4 align-items-start">
                                     <h2 class="h1 fw-bold text-white mb-0 d-flex align-items-center gap-2">ASSUMA O CONTROLE DO SEU <br> HISTÓRICO SONORO.</h2>
-                                    <span class="text-white medium"> Cadastre-se gratuitamente. Crie seu primeiro relatório em menos de 60 segundos <br> e importe seu histórico do Last.fm ou Discogs. </span>
+                                    <span class="text-white"> Cadastre-se gratuitamente. Crie seu primeiro relatório em menos de 60 segundos <br> e importe seu histórico do Last.fm ou Discogs. </span>
 
                                     <div class="d-flex flex-column flex-sm-row gap-3 align-items-stretch w-100">
-                                        <input type="text" placeholder="Exemplo: audiophile13@email.com" class="form-control">
-                                        <button class="btn btn-secondary btn-xl font-monospace fw-semibold px-3 py-2 text-nowrap flex-shrink-0">[CRIAR CONTA // LIVE]</button>
+                                        <form action="login.html" method="get"
+                                            class="d-flex flex-column flex-sm-row gap-3 align-items-stretch w-100">
+                                            <input type="hidden" name="modo" value="cadastro">
+                                            <input type="email" name="email" required
+                                                placeholder="Exemplo: audiophile13@email.com" class="form-control"
+                                                aria-label="E-mail" autocomplete="email">
+                                            <button type="submit"
+                                                    class="btn btn-secondary font-monospace fw-semibold px-3 py-2 text-nowrap flex-shrink-0">
+                                                [CRIAR CONTA // LIVE]
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
 

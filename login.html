@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 page-login">
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white border-opacity-10 py-3"
@@ -41,10 +41,10 @@
                             <a class="nav-link text-white-50" href="tapin.html">Explorar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50" href="index.html#cadastro">Cadastre-se</a>
+                            <a class="nav-link text-white-50" href="login.html?modo=cadastro">Cadastre-se</a>
                         </li>
-                        <li class="nav-item">cd
-                            <a class="nav-link active text-danger fw-semibold" aria-current="page" href="#">Login</a>
+                        <li class="nav-item">
+                            <a class="nav-link active text-danger fw-semibold" aria-current="page" href="login.html?modo=login">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -56,72 +56,125 @@
         <div class="container-xl px-3 px-sm-4">
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
- 
-                    <div class="stat-card bg-body-secondary border rounded-3 p-4 shadow-sm">
- 
-                        <div class="d-flex flex-column gap-1 mb-4">
-                            <span class="text-danger fw-bold font-monospace small">
-                                <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> [AUDIARY // login]
-                            </span>
-                            <h1 class="h3 fw-bold text-black mb-0">BEM-VINDO DE VOLTA.</h1>
-                            <p class="text-secondary small mb-0">
-                                Entre para acessar seu histórico sonoro e seus relatórios.
-                            </p>
-                        </div>
- 
-                        <form id="form-login" class="d-flex flex-column gap-3" action="#" novalidate>
- 
-                            <div>
-                                <label for="email" class="form-label fw-bold font-monospace small text-black mb-1">E-MAIL</label>
-                                <input type="email" id="email" name="email" class="form-control py-2"
-                                    placeholder="audiophile13@email.com" autocomplete="email">
-                            </div>
- 
-                            <div>
-                                <div class="d-flex justify-content-between align-items-baseline mb-1">
-                                    <label for="senha" class="form-label fw-bold font-monospace small text-black mb-0">SENHA</label>
-                                    <a href="#" class="font-monospace small text-danger text-decoration-none">
-                                        Esqueci minha senha
-                                    </a>
+
+                    <div class="flip-card" id="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-face front" id="face-login">
+                        
+                                <div class="stat-card bg-body-secondary border rounded-3 p-4 shadow-sm">
+            
+                                    <div class="d-flex flex-column gap-1 mb-4">
+                                        <span class="text-danger fw-bold font-monospace small">
+                                            <span class="bg-danger d-inline-block rounded-1 dot"></span> [AUDIARY // login]
+                                        </span>
+                                        <h1 class="h3 fw-bold text-black mb-0">BEM-VINDO DE VOLTA.</h1>
+                                        <p class="text-secondary small mb-0">
+                                            Entre para acessar seu histórico sonoro e seus relatórios.
+                                        </p>
+                                    </div>
+            
+                                    <form id="form-login" class="d-flex flex-column gap-3" action="#" novalidate>
+            
+                                        <div>
+                                            <label for="email" class="form-label fw-bold font-monospace small text-black mb-1">E-MAIL</label>
+                                            <input type="email" id="email" name="email" class="form-control py-2"
+                                                placeholder="Ex: audiophile13@email.com" autocomplete="email">
+                                        </div>
+            
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                                <label for="senha" class="form-label fw-bold font-monospace small text-black mb-0">SENHA</label>
+                                                <a href="#" class="font-monospace small text-danger text-decoration-none">
+                                                    Esqueci minha senha
+                                                </a>
+                                            </div>
+                                            <input type="password" id="senha" name="senha" class="form-control py-2"
+                                                placeholder="Sua senha" autocomplete="current-password">
+                                        </div>
+            
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="lembrar" name="lembrar">
+                                            <label class="form-check-label small text-black" for="lembrar">
+                                                Manter conectado
+                                            </label>
+                                        </div>
+            
+                                        <button type="submit"
+                                            class="btn btn-danger font-monospace fw-bold py-2 w-100 text-nowrap">
+                                            [ENTRAR // LIVE]
+                                        </button>
+                                    </form>
+
+                                    <div class="d-flex align-items-center gap-3 my-4">
+                                        <hr class="flex-grow-1 m-0">
+                                        <span class="font-monospace small text-secondary">OU</span>
+                                        <hr class="flex-grow-1 m-0">
+                                    </div>
+            
+                                    <button type="button"
+                                        class="btn btn-outline-dark font-monospace fw-semibold py-2 w-100 text-nowrap"
+                                        id="btn-lastfm">
+                                        <i class="bi bi-lastfm me-2"></i>Entrar com Last.fm
+                                    </button>
+
+                                    <p class="text-center small text-secondary font-monospace mt-4 mb-0">
+                                        Ainda não tem conta?
+                                        <a href="index.html#cadastro" id="ir-cadastro"
+                                            class="text-danger fw-semibold text-decoration-none">Criar conta grátis</a>
+                                    </p>
                                 </div>
-                                <input type="password" id="senha" name="senha" class="form-control py-2"
-                                    placeholder="Sua senha" autocomplete="current-password">
-                            </div>
- 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="lembrar" name="lembrar">
-                                <label class="form-check-label small text-black" for="lembrar">
-                                    Manter conectado
-                                </label>
-                            </div>
- 
-                            <button type="submit"
-                                class="btn btn-danger font-monospace fw-bold py-2 w-100 text-nowrap">
-                                [ENTRAR // LIVE]
-                            </button>
-                        </form>
+                            </div> 
+                    
+                            <div class="flip-face back" id="face-cadastro" inert>
+                                <div class="card-signup bg-danger rounded-3 p-4 shadow-sm h-100">
 
-                        <div class="d-flex align-items-center gap-3 my-4">
-                            <hr class="flex-grow-1 m-0">
-                            <span class="font-monospace small text-secondary">OU</span>
-                            <hr class="flex-grow-1 m-0">
+                                    <div class="d-flex flex-column gap-1 mb-4">
+                                    <span class="text-white fw-bold font-monospace small">
+                                        <span class="bg-white d-inline-block rounded-1 dot"></span> [AUDIARY // cadastro]
+                                    </span>
+                                    <h2 class="h3 fw-bold text-white mb-0">CRIE SUA CONTA.</h2>
+                                    <p class="text-white small mb-0 opacity-75">
+                                        Comece a registrar seu histórico sonoro em segundos.
+                                    </p>
+                                    </div>
+
+                                    <form id="form-cadastro" class="d-flex flex-column gap-3" action="#" novalidate>
+                                    <div>
+                                        <label for="cad-nome" class="form-label fw-bold font-monospace small text-white mb-1">NOME</label>
+                                        <input type="text" id="cad-nome" class="form-control py-2"
+                                            placeholder="Seu nome" autocomplete="name">
+                                    </div>
+                                    <div>
+                                        <label for="cad-user" class="form-label fw-bold font-monospace small text-white mb-1">NOME DE USUÁRIO</label>
+                                        <input type="text" id="cad-user" class="form-control py-2"
+                                            placeholder="Ex: audiophile001" autocomplete="name">
+                                    </div>
+                                    <div>
+                                        <label for="cad-email" class="form-label fw-bold font-monospace small text-white mb-1">E-MAIL</label>
+                                        <input type="email" id="cad-email" class="form-control py-2"
+                                            placeholder="Ex: audiophile13@email.com" autocomplete="email">
+                                    </div>
+                                    <div>
+                                        <label for="cad-senha" class="form-label fw-bold font-monospace small text-white mb-1">SENHA</label>
+                                        <input type="password" id="cad-senha" class="form-control py-2"
+                                            placeholder="Crie uma senha" autocomplete="new-password">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-dark font-monospace fw-bold py-2 w-100 text-nowrap">
+                                        [CRIAR CONTA // LIVE]
+                                    </button>
+                                    </form>
+
+                                    <p class="text-center small text-white font-monospace mt-4 mb-0">
+                                    Já tem conta?
+                                    <a href="#" id="voltar-login" class="text-white fw-semibold">Entrar</a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
- 
-                        <button type="button"
-                            class="btn btn-outline-dark font-monospace fw-semibold py-2 w-100 text-nowrap"
-                            id="btn-lastfm">
-                            <i class="bi bi-lastfm me-2"></i>Entrar com Last.fm
-                        </button>
-
-                        <p class="text-center small text-secondary font-monospace small mt-4 mb-0">
-                            Ainda não tem conta?
-                            <a href="index.html#cadastro" class="text-danger fw-semibold text-decoration-none">
-                                Criar conta grátis
-                            </a>
-                        </p>
                     </div>
- 
-                </div>
+
+                </div>    
             </div>
         </div>
     </main>
@@ -135,6 +188,46 @@
     </footer>
  
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const card = document.getElementById('flip-card');
+        const faceLogin = document.getElementById('face-login');
+        const faceCad = document.getElementById('face-cadastro');
+
+        function flip(toSignup) {
+            card.classList.toggle('is-flipped', toSignup);
+            // impede foco por Tab / leitores de tela na face escondida
+            setTimeout(() => {
+                const alvo = toSignup
+                    ? (document.getElementById('cad-email').value
+                        ? document.getElementById('cad-nome')
+                        : document.getElementById('cad-nome'))
+                    : document.getElementById('email');
+                alvo.focus();
+            }, 350);
+            faceCad.inert = !toSignup;
+            setTimeout(() => {
+            (toSignup ? document.getElementById('cad-nome')
+                        : document.getElementById('email')).focus();
+            }, 350);
+        }
+
+        document.getElementById('ir-cadastro').addEventListener('click', e => {
+            e.preventDefault();
+            flip(true);
+        });
+        document.getElementById('voltar-login').addEventListener('click', e => {
+            e.preventDefault();
+            flip(false);
+        });
+
+        const params = new URLSearchParams(location.search);
+
+        if (params.get('modo') === 'cadastro') {
+            const email = params.get('email');
+            if (email) document.getElementById('cad-email').value = email;
+            flip(true);
+        }
+    </script>
 </body>
  
 </html>

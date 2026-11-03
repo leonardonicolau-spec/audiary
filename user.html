@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 page-user">
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white border-opacity-10 py-3"
@@ -43,7 +43,7 @@
                             <a class="nav-link text-white-50" href="tapin.html">Explorar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50" href="index.html#cadastro">Cadastre-se</a>
+                            <a class="nav-link text-white-50" href="login.html?modo=cadastro">Cadastre-se</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white-50" href="login.html">Login</a>
@@ -61,8 +61,10 @@
                     <div class="d-flex flex-column gap-4">
                         <div class="d-flex flex-row align-items-center flex-wrap gap-2">
                             <span class="text-body-secondary fw-bold font-monospace small">
-                                <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span> AUDIARY / PERFIL DO OUVINTE /
-                                <span class="text-danger font-monospace">[MEMBRO ATIVO]</span>
+                                <span class="bg-danger d-inline-block rounded-1 dot"></span> AUDIARY / PERFIL DO OUVINTE /
+                                <a href="diary.html" class="text-decoration-none text-dark">
+                                    <span class="text-danger font-monospace">[VER BIBLIOTECA]</span>
+                                </a>
                             </span>
                         </div>
 
@@ -77,20 +79,20 @@
                             
                                 <div class="col col-md-auto flex-grow-1 flex-xl-grow-0 min-w-0">
                                     <div class="d-flex flex-column gap-1">
-                                        <span class="text-danger font-monospace small fw-bold text-break text-xl-nowrap">[MEMBRO ATIVO // há 2 anos, 3 meses e 4 dias]</span>
-                                        <h1 class="h2 fw-bold text-dark mb-0 lh-1">LEONARDO</h1>
+                                        <span class="text-danger font-monospace small fw-bold text-break text-xl-nowrap">[MEMBRO ATIVO]</span>
+                                        <h2 class="h2 fw-bold text-dark mb-0 lh-1">LEONARDO</h2>
                                         <span class="text-dark text-opacity-50 fw-bold small">@myspace.leo</span>
                                         <span class="text-body-secondary fw-bold small mt-2 mt-xl-4 text-break text-xl-nowrap">
-                                            <i class="bi bi-geo-alt-fill"></i> Guarapuava, PR Brasil • Desde mar. 2024
+                                            <i class="bi bi-geo-alt-fill"></i> Guarapuava, PR Brasil • Desde out. 2026
                                         </span>
                                     </div>
                                 </div>
 
-                                <div class="col-12 col-xl ms-xl-auto">
-                                    <div class="d-flex flex-column gap-3 align-items-stretch align-items-xl-end">
+                                <div class="col-12">
+                                    <div class="d-flex flex-column flex-sm-row gap-3 align-items-stretch align-items-xl-end">
                                         <div class="card bg-body border-0 rounded-3 p-3 shadow-sm w-100">
                                             <span class="text-dark text-opacity-75 small">
-                                                Membro e catalogador obsessivo desde 2023. Keep track of what you hear.
+                                                Membro e catalogador obsessivo desde 2026. Keep track of what you hear.
                                                 Arquivando ruídos, polirritmias urbanas e sintetizadores analógicos.
                                                 Inspeção crítica de gravações mastigadas por tape delay e sub-graves de 30Hz a 18kHz.
                                             </span>
@@ -109,7 +111,7 @@
 
                             <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
                                 <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    <span class="bg-danger d-inline-block rounded-1 dot"></span>
                                     Telemetria &amp; Estatísticas
                                 </h2>
                                 <span class="text-body-tertiary font-monospace small text-uppercase tracking">Tempo real</span>
@@ -117,31 +119,28 @@
 
                             <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3">
 
-                                <!-- Álbuns -->
                                 <div class="col">
                                     <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
                                         <div class="d-flex justify-content-between align-items-center mb-3">
                                             <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Álbuns</span>
                                             <i class="bi bi-disc fs-5 text-body-secondary"></i>
                                         </div>
-                                        <h1 class="h2 fw-bold text-dark mb-0 lh-1">142</h1>
+                                        <h2 class="h2 fw-bold text-dark mb-0 lh-1">142</h2>
                                         <span class="font-monospace small fw-semibold text-uppercase text-danger tracking">+18 este mês</span>
                                     </div>
                                 </div>
 
-                                <!-- Resenhas -->
                                 <div class="col">
                                     <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
                                         <div class="d-flex justify-content-between align-items-center mb-3">
                                             <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Resenhas</span>
                                             <i class="bi bi-pencil-square fs-5 text-body-secondary"></i>
                                         </div>
-                                        <h1 class="h2 fw-bold text-dark mb-0 lh-1">27</h1>
+                                        <h2 class="h2 fw-bold text-dark mb-0 lh-1">27</h2>
                                         <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Indexadas // SYS</span>
                                     </div>
                                 </div>
 
-                                <!-- Nota média -->
                                 <div class="col">
                                     <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
                                         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -149,21 +148,20 @@
                                             <i class="bi bi-star-fill fs-5 text-danger"></i>
                                         </div>
                                         <div class="d-flex align-items-baseline gap-2">
-                                            <h1 class="h2 fw-bold text-dark mb-0 lh-1">4.1</h1>
+                                            <h2 class="h2 fw-bold text-dark mb-0 lh-1">4.1</h2>
                                             <span class="font-monospace small text-body-secondary">/ 5.0</span>
                                         </div>
                                         <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Curadoria crítica</span>
                                     </div>
                                 </div>
 
-                                <!-- Favoritos -->
                                 <div class="col">
                                     <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
                                         <div class="d-flex justify-content-between align-items-center mb-3">
                                             <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Favoritos</span>
                                             <i class="bi bi-heart-fill fs-5 text-danger"></i>
                                         </div>
-                                        <h1 class="h2 fw-bold text-dark mb-0 lh-1">12</h1>
+                                        <h2 class="h2 fw-bold text-dark mb-0 lh-1">12</h2>
                                         <span class="font-monospace small fw-semibold text-uppercase text-danger tracking">Tier essencial</span>
                                     </div>
                                 </div>
@@ -173,7 +171,7 @@
                         <section class="d-flex flex-column gap-3 gap-md-4">
                             <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
                                 <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    <span class="bg-danger d-inline-block rounded-1 dot"></span>
                                     Top 4 Favoritos <span class="text-body-secondary font-monospace small d-none d-sm-inline">[TETRAD_ESSENCIAL]</span>
                                 </h2>
                                 <span class="text-danger font-monospace small text-uppercase tracking" href="index.html">[EDITAR]</span>
@@ -262,7 +260,7 @@
                         <section class="d-flex flex-column gap-3 gap-md-4">
                             <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
                                 <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    <span class="bg-danger d-inline-block rounded-1 dot"></span>
                                     ÚLTIMAS RESENHAS PUBLICADAS
                                 </h2>
                                 <span class="text-dark font-monospace small text-uppercase tracking d-none d-sm-inline">[LOG_ARCHIVE]</span>
@@ -290,6 +288,7 @@
                                         </div>
                                     </div>
                                     
+                                    
                                     <div class="d-flex flex-column gap-2">
                                         <div class="card bg-body border-0 rounded-3 p-3 shadow-sm w-100">
                                             <span class="text-dark text-opacity-75">
@@ -312,6 +311,8 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                
                                 
                                 <div class="stat-card1 d-flex flex-column gap-3 p-3 p-md-4 rounded-3 border">
                                     

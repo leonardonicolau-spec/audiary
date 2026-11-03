@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiary | Diário</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white border-opacity-10 py-3"
+            data-bs-theme="dark">
+            <div class="container-xl px-3 px-sm-4">
+                <a class="navbar-brand fw-bold text-danger fs-4" href="index.html">Audiary</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul
+                        class="navbar-nav ms-auto align-items-lg-center font-monospace nav-underline small pt-2 pt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 fw-semibold" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-danger"  aria-current="page" href="user.html">Usuário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="tapin.html">Explorar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="login.html?modo=cadastro">Cadastre-se</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-4 py-md-5 bg-body">
+        <div class="container-xl px-3 px-sm-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-xl-12">
+                    <div class="d-flex flex-column gap-4">
+                        <section class="d-flex flex-column gap-3">
+                            <a href="user.html" class="text-decoration-none">
+                                <span class="font-monospace text-dark small text-opacity-50">&lt;- VOLTAR PARA A PÁGINA DE USUÁRIO</span>
+                            </a>
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                    <span class="bg-danger d-inline-block rounded-1 dot"></span>
+                                    DOSSIÊ // ARQ_PESSOAL
+                                </h2>
+                                <span class="text-body-tertiary font-monospace small text-uppercase tracking">Tempo real</span>
+                            </div>
+
+                            <div class="tags d-flex flex-row gap-2">
+                                    <div class="card bg-dark">
+                                        <span class="text-white font-monospace small text-uppercase m-1">OUVIDOS (142)</span>
+                                    </div>
+                                    <div class="card bg-body-secondary">
+                                        <span class="text-dark text-opacity-50 font-monospace small text-uppercase m-1">LISTENLIST (31)</span>
+                                    </div>
+                                    <div class="card bg-body-secondary">
+                                        <span class="text-dark text-opacity-50 font-monospace small text-uppercase m-1">FAVORITOS (12)</span>
+                                    </div>
+                                    <div class="card bg-body-secondary">
+                                        <span class="text-dark text-opacity-50 font-monospace small text-uppercase m-1">RESENHAS (142)</span>
+                                    </div>
+                            </div>
+                                
+                            <div class="stat-card1 bg-body-secondary border rounded-3 p-3 p-md-4 shadow-sm">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                    <div class="d-flex flex-row gap-2">
+                                        <i class="bi bi-sliders2-vertical fw-bold text-danger"></i>
+                                        <span class="text-dark font-monospace small text-uppercase fw-bold tracking d-none d-sm-inline">FILTRAR TELEMETRIA</span>
+                                        <span class="text-danger font-monospace small text-uppercase tracking d-none d-sm-inline">[LIMPAR]</span>
+                                    </div>
+                                    <div class="tags d-flex flex-row gap-2">
+                                        <div class="card bg-body-secondary">
+                                            <span class="text-dark font-monospace small text-uppercase m-3">GÊNEROS: TODOS (48)</span>
+                                        </div>
+                                        <div class="card bg-body-secondary">
+                                            <span class="text-dark text-opacity-50 font-monospace small text-uppercase m-3">ANO: TODOS</span>
+                                        </div>
+                                        <div class="card bg-body-secondary">
+                                            <span class="text-dark text-opacity-50 font-monospace small text-uppercase m-3">DATA DE AUDIÇÃO</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="row g-4">
+                            <section class="col-12 col-lg-7 d-flex flex-column gap-3">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                    <div class="d-flex flex-row gap-2 align-items-center mt-3">
+                                        <h2 class="h3 text-dark text-uppercase fw-bold tracking d-none d-sm-inline">OUTUBRO 2026</h2>
+                                        <span class="text-dark font-monospace text-opacity-50 small text-uppercase tracking d-none d-sm-inline">[18 ÁLBUNS]</span>
+                                    </div>
+                                    <span class="text-danger font-monospace small text-uppercase tracking d-none d-sm-inline">LOG_RECV_STATUS: OK</span>
+                                </div>
+
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="stat-card1 d-flex mt-1 flex-column gap-2 p-3 p-md-4 rounded-3 border">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                            <div class="d-flex flex-row gap-2">
+                                                <span class="avatar-sm rounded-circle bg-danger flex-shrink-0"></span>
+                                                <span class="font-monospace fw-semibold small text-dark">@myspace.leo</span>
+                                            </div>
+
+                                            <div class="text-danger fs-6">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="card bg-body-secondary p-3 mt-3 rounded-3 border">
+                                            <div class="d-flex flex-row gap-3">
+                                                <img class="res-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793486057/ooepu.webp" alt="Capa do Álbum Oil of Every Pearl's Un-Insides">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <h2 class="h6 fw-bold text-dark mb-0 d-flex align-items-center gap-2 tracking">Oil of Every Pearl's Un-Insides</h2>
+                                                    <span class="text-dark font-monospace fw-bold mb-0 m-0 small">SOPHIE // 2019</span>
+                                                    <span class="text-danger font-monospace small fw-bold text-break">HYPERPOP // ELETRÔNICA</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <span class="text-dark medium mt-3 text-break tracking">
+                                            “O sound design da SOPHIE aqui continua sendo inconfundível. Esse álbum é o maior legado da genialidade dessa pioneira mãe do Hyperpop que foi a SOPHIE. Descanse em Paz.”
+                                        </span>
+                                        <span class="text-dark font-monospace text-opacity-50 small">
+                                            24.10.26 // 11:42
+                                        </span>
+
+                                        <div class="d-flex align-items-center my-2">
+                                            <hr class="flex-grow-1 m-0">
+                                        </div>
+
+                                        <div class="d-flex flex-row gap-2">
+                                            <button class="btn btn-outline-danger btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-heart me-1"></i> Curtir
+                                            </button>
+                                            <button class="btn btn-outline-dark btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-chat me-1"></i>
+                                                Comentar
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="stat-card1 d-flex mt-1 flex-column gap-2 p-3 p-md-4 rounded-3 border">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                            <div class="d-flex flex-row gap-2">
+                                                <span class="avatar-sm rounded-circle bg-danger flex-shrink-0"></span>
+                                                <span class="font-monospace fw-semibold small text-dark">@myspace.leo</span>
+                                            </div>
+
+                                            <div class="text-danger fs-6">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="card bg-body-secondary p-3 mt-3 rounded-3 border">
+                                            <div class="d-flex flex-row gap-3">
+                                                <img class="res-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793485995/async.jpg" alt="Capa do Álbum async">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <h2 class="h6 fw-bold text-dark mb-0 d-flex align-items-center gap-2 tracking">async</h2>
+                                                    <span class="text-dark font-monospace fw-bold mb-0 m-0 lh-0 small">Ryuichi Sakamoto // 2014</span>
+                                                    <span class="text-danger font-monospace small fw-bold text-break">EXPERIMENTAL // NEO-CLÁSSICO</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <span class="text-dark medium mt-3 text-break tracking">
+                                            “Poli-ritmia cirúrgica. Os transientes cortam o espectro com uma frieza mecânica visceral que desafia qualquer expectativa de footwork tradicional.”
+                                        </span>    
+                                        <span class="text-dark font-monospace text-opacity-50 small">
+                                            24.10.26 // 17:21
+                                        </span>
+
+                                        <div class="d-flex align-items-center my-2">
+                                            <hr class="flex-grow-1 m-0">
+                                        </div>
+
+                                        <div class="d-flex flex-row gap-2">
+                                            <button class="btn btn-outline-danger btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-heart me-1"></i> Curtir
+                                            </button>
+                                            <button class="btn btn-outline-dark btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-chat me-1"></i>
+                                                Comentar
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="stat-card1 d-flex mt-1 flex-column gap-2 p-3 p-md-4 rounded-3 border">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                            <div class="d-flex flex-row gap-2">
+                                                <span class="avatar-sm rounded-circle bg-danger flex-shrink-0"></span>
+                                                <span class="font-monospace fw-semibold small text-dark">@myspace.leo</span>
+                                            </div>
+
+                                            <div class="text-danger fs-6">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="card bg-body-secondary p-3 mt-3 rounded-3 border">
+                                            <div class="d-flex flex-row gap-3">
+                                                <img class="res-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793486223/escaper.jpg" alt="Capa do Álbum Escaper">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <h2 class="h6 fw-bold text-dark mb-0 d-flex align-items-center gap-2 tracking">Escaper</h2>
+                                                    <span class="text-dark font-monospace fw-bold mb-0 m-0 lh-0 small">Sarah Kinsley // 2024</span>
+                                                    <span class="text-danger font-monospace small fw-bold text-break">INDIE-POP // ALT-POP</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <span class="text-dark medium mt-3 text-break tracking">
+                                            “Poli-ritmia cirúrgica. Os transientes cortam o espectro com uma frieza mecânica visceral que desafia qualquer expectativa de footwork tradicional.”
+                                        </span>    
+                                        <span class="text-dark font-monospace text-opacity-50 small">
+                                            24.10.26 // 17:21
+                                        </span>
+
+                                        <div class="d-flex align-items-center my-2">
+                                            <hr class="flex-grow-1 m-0">
+                                        </div>
+
+                                        <div class="d-flex flex-row gap-2">
+                                            <button class="btn btn-outline-danger btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-heart me-1"></i> Curtir
+                                            </button>
+                                            <button class="btn btn-outline-dark btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-chat me-1"></i>
+                                                Comentar
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="stat-card1 d-flex mt-1 flex-column gap-2 p-3 p-md-4 rounded-3 border">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                            <div class="d-flex flex-row gap-2">
+                                                <span class="avatar-sm rounded-circle bg-danger flex-shrink-0"></span>
+                                                <span class="font-monospace fw-semibold small text-dark">@myspace.leo</span>
+                                            </div>
+
+                                            <div class="text-danger fs-6">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="card bg-body-secondary p-3 mt-3 rounded-3 border">
+                                            <div class="d-flex flex-row gap-3">
+                                                <img class="res-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793486195/SigurRos_A%CC%81g%C3%A6tisByrjun.jpg" alt="Capa do Álbum Ágætis byrjun">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <h2 class="h6 fw-bold text-dark mb-0 d-flex align-items-center gap-2 tracking">Ágætis byrjun</h2>
+                                                    <span class="text-dark font-monospace fw-bold mb-0 m-0 lh-0 small">Sigur Rós // 1999</span>
+                                                    <span class="text-danger font-monospace small fw-bold text-break">POST-ROCK // EXPERIMENTAL</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <span class="text-dark medium mt-3 text-break tracking">
+                                            “Poli-ritmia cirúrgica. Os transientes cortam o espectro com uma frieza mecânica visceral que desafia qualquer expectativa de footwork tradicional.”
+                                        </span>    
+                                        <span class="text-dark font-monospace text-opacity-50 small">
+                                            24.10.26 // 17:21
+                                        </span>
+
+                                        <div class="d-flex align-items-center my-2">
+                                            <hr class="flex-grow-1 m-0">
+                                        </div>
+
+                                        <div class="d-flex flex-row gap-2">
+                                            <button class="btn btn-outline-danger btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-heart me-1"></i> Curtir
+                                            </button>
+                                            <button class="btn btn-outline-dark btn-sm font-monospace fw-semibold w-100 bg-white">
+                                                <i class="bi bi-chat me-1"></i>
+                                                Comentar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="col-12 col-lg-5 d-flex flex-column gap-3">
+                                <div class="stat-card1 d-flex flex-column gap-3 h-100 p-3 p-sm-4 rounded-3 border">
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                        <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                            MÉTRICAS DO MÊS // OUT 2026
+                                        </h2>
+                                        <span class="text-danger font-monospace small text-uppercase tracking">real_TIME</span>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap flex-sm-row gap-3">
+                                        <div class="col">
+                                            <div class="card bg-body-secondary h-100 p-3 p-sm-4 rounded-3 border">
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <span class="font-monospace small fw-semibold text-uppercase text-dark text-opacity-50 tracking">GÊNERO DOMINANTE</span>
+                                                </div>
+                                                <h3 class="h4 fw-bold text-dark mb-1 lh-1">EXPERIMENTAL</h3>
+                                                <span class="font-monospace small fw-semibold text-uppercase text-danger tracking">55% DO FLUXO</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="card bg-body-secondary p-3 h-100 p-sm-4 rounded-3 border">
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <span class="font-monospace small fw-semibold text-uppercase text-body-secondary tracking">Nota média</span>
+                                                </div>
+                                                <div class="d-flex align-items-baseline gap-2">
+                                                    <h2 class="h2 fw-bold text-danger mb-0 lh-1">4.2</h2>
+                                                    <span class="font-monospace small text-body-secondary">/ 5.0</span>
+                                                </div>
+                                                <div class="text-danger fs-6">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-half"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="formats-section border-top pt-3">
+                                        <div class="d-flex justify-content-between align-items-center font-monospace fw-bold mb-2">
+                                            <span class="formats-title text-uppercase text-muted fw-bold">Relação dos Gêneros</span>
+                                            <span class="formats-count fw-bold text-secondary">18 ÁLBUNS</span>
+                                        </div>
+
+                                        <div class="progress-stacked mb-3">
+                                            <div class="progress" role="progressbar" style="width: 55%"><div class="progress-bar bg-flac"></div></div>
+                                            <div class="progress" role="progressbar" style="width: 25%"><div class="progress-bar bg-vinil"></div></div>
+                                            <div class="progress" role="progressbar" style="width: 15%"><div class="progress-bar bg-cd"></div></div>
+                                            <div class="progress" role="progressbar" style="width: 5%"><div class="progress-bar bg-stream"></div></div>
+                                        </div>
+
+                                        <div class="formats-legend d-flex flex-wrap gap-3 text-uppercase font-monospace fw-bold text-muted">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <span class="legend-dot bg-flac"></span>
+                                                EXPERIMENTAL <span class="text-secondary fw-normal">55%</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1">
+                                                <span class="legend-dot bg-vinil"></span>
+                                                ELETRÔNICA <span class="text-secondary fw-normal">25%</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1">
+                                                <span class="legend-dot bg-cd"></span>
+                                                POP <span class="text-secondary fw-normal">15%</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1">
+                                                <span class="legend-dot bg-stream"></span>
+                                                FOOTWORK <span class="text-secondary fw-normal">5%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="formats-section border-top pt-3">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                            <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                                ARTISTA MAIS ESCUTADO
+                                            </h2>
+                                            <span class="text-danger font-monospace small text-uppercase tracking">artist_PEAK</span>
+                                        </div>
+
+                                        <div class="col mt-3">
+                                            <div class="card bg-body-secondary h-100 p-3 p-sm-4 rounded-3 border">
+                                                <div class="d-flex flex-column gap-3">
+                                                    <img src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793556650/arrrca.jpg" class="fav-album rounded-3 shadow-sm" alt="Foto da Artista Arca">
+                                                    <div class="d-flex justify-content-between align-items-center flex-wrap mt-2 gap-2">
+                                                        <h3 class="h2 fw-bold text-dark mb-1 lh-1">ARCA</h3>
+                                                        <span class="text-danger font-monospace small text-uppercase tracking">3 ÁLBUNS ESCUTADOS</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col mt-3">
+                                                    <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
+                                                        <div class="d-flex flex-column gap-3">
+                                                            <div class="d-flex flex-row gap-2">
+                                                                <i class="text-danger bi bi-headphones"></i> 
+                                                                <span class="text-danger font-monospace fw-bold text-break">5 ESCUTAS</span>
+                                                            </div>
+                                                            <div class="d-flex flex-row gap-3">
+                                                                <img class="res-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793561265/xxxxxx.webp" alt="Capa do Álbum XXXXX">
+                                                                <div class="d-flex flex-column gap-2">
+                                                                    <h2 class="h6 fw-bold text-dark mb-0 d-flex align-items-center gap-2 tracking">XXXXX</h2>
+                                                                    <span class="text-dark font-monospace fw-bold mb-0 m-0 lh-0 small">2026</span>
+                                                                    <span class="text-dark font-monospace small fw-bold text-break">EXPERIMENTAL // ELETRÔNICA</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col mt-3">
+                                                    <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
+                                                        <div class="d-flex flex-column gap-3">
+                                                            <div class="d-flex flex-row gap-2">
+                                                                <i class="text-danger bi bi-headphones"></i> 
+                                                                <span class="text-danger font-monospace fw-bold text-break">2 ESCUTAS</span>
+                                                            </div>
+                                                            <div class="d-flex flex-row gap-3">
+                                                                <img class="res-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793557193/arca.jpg" alt="Capa do Álbum Arca">
+                                                                <div class="d-flex flex-column gap-2">
+                                                                    <h2 class="h6 fw-bold text-dark mb-0 d-flex align-items-center gap-2 tracking">Arca</h2>
+                                                                    <span class="text-dark font-monospace fw-bold mb-0 m-0 lh-0 small">2017</span>
+                                                                    <span class="text-dark font-monospace small fw-bold text-break">EXPERIMENTAL // ART-POP</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col mt-3">
+                                                    <div class="stat-card1 h-100 p-3 p-sm-4 rounded-3 border">
+                                                        <div class="d-flex flex-column gap-3">
+                                                            <div class="d-flex flex-row gap-2">
+                                                                <i class="text-danger bi bi-headphones"></i> 
+                                                                <span class="text-danger font-monospace fw-bold text-break">1 ESCUTA</span>
+                                                            </div>
+                                                            <div class="d-flex flex-row gap-3">
+                                                                <img class="res-album rounded-3 shadow-sm" src="https://res.cloudinary.com/rtwqgzum/image/upload/v1793561887/kicki.jpg" alt="Capa do Álbum kiCK i">
+                                                                <div class="d-flex flex-column gap-2">
+                                                                    <h2 class="h6 fw-bold text-dark mb-0 d-flex align-items-center gap-2 tracking">kiCK i</h2>
+                                                                    <span class="text-dark font-monospace fw-bold mb-0 m-0 lh-0 small">2020</span>
+                                                                    <span class="text-dark font-monospace small fw-bold text-break">EXPERIMENTAL // ELETÔNICA</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    
+                                    <div class="formats-section border-top pt-3">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                            <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
+                                                CAMPO DE AÇÃO
+                                            </h2>
+                                            <span class="text-danger font-monospace small text-uppercase tracking">SYS_PROMPT</span>
+                                        </div>
+
+                                        <div class="d-flex flex-column gap-4">
+                                            <div class="card rounded-2 mt-2 bg-dark">
+                                                <div class="d-flex flex-row gap-2 m-3 align-items-center">
+                                                    <a href="tapin.html" class="text-decoration-none">
+                                                        <button type="button" class="btn btn-secondary bg-danger ml-2 font-monospace fw-semibold px-3 py-2 text-nowrap"> + </button>
+                                                    </a>
+                                                    <div class="d-flex flex-column lh-0">
+                                                        <span class="font-monospace text-white fw-bold tracking">REGISTRAR ESCUTA</span>
+                                                        <span class="font-monospace text-opacity-50 text-white small fw-bold tracking">CATALOGAR NOVO DISCO</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="text-black text-opacity-50 font-monospace small">Inicie a telemetria manual ou importe metadados diretamente da sua conta last.fm </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>    
+    </main>
+
+    <footer class="bg-body py-4 border-top mt-auto">
+        <div
+            class="container-xl px-3 px-sm-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-secondary">
+            <p class="mb-0 text-dark">Copyright &copy; 2026  <span class="footer-t text-danger fw-bold h4">Audiary</span>  Inc. All rights reserved</p>
+            <p class="mb-0 text-secondary">Privacy Policy | Terms of Use | Sales and Refunds | Legal | Site Map</p>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

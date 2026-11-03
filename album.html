@@ -14,11 +14,10 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/album.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 page-album">
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white border-opacity-10 py-3"
@@ -44,7 +43,7 @@
                             <a class="nav-link active text-danger" aria-current="page" href="tapin.html">Explorar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50" href="index.html#cadastro">Cadastre-se</a>
+                            <a class="nav-link text-white-50" href="login.html?modo=cadastro">Cadastre-se</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white-50" href="login.html">Login</a>
@@ -55,28 +54,20 @@
         </nav>
     </header>
 
-    <!--
-        HOOKS PARA O JS (Last.fm album.getInfo):
-        data-album="..."  -> elementos que recebem texto/atributo da API
-        A página será chamada como album.html?artist=Tim+Hecker&album=Radio+Amor
-        (o Last.fm identifica o álbum por artista + nome, ou por mbid)
-    -->
     <main class="py-4 py-md-5 bg-body">
         <div class="container-xl px-3 px-sm-5">
             <div class="d-flex flex-column gap-4">
 
-                <!-- ======================= CABEÇALHO DO ÁLBUM ======================= -->
                 <section class="stat-card1 border rounded-3 p-3 p-md-4 shadow-sm">
                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
                         <a href="tapin.html"
                             class="text-dark text-opacity-75 font-monospace small text-uppercase tracking text-decoration-none">
-                            <i class="bi bi-arrow-left me-1"></i> Voltar para explorar
+                            &lt;- Voltar para explorar
                         </a>
                         <span class="text-danger font-monospace small text-uppercase tracking d-none d-sm-inline">[ALBUM_LOG]</span>
                     </div>
 
                     <div class="row g-4">
-                        <!-- capa -->
                         <div class="col-12 col-md-5 col-lg-4">
                             <img class="fav-album album-cover rounded-3 shadow-sm mx-auto d-block"
                                 data-album="cover"
@@ -84,7 +75,6 @@
                                 alt="Capa do álbum Lux">
                         </div>
 
-                        <!-- informações -->
                         <div class="col-12 col-md-7 col-lg-8 d-flex flex-column gap-3">
                             <div class="d-flex flex-column gap-1">
                                 <span class="text-danger font-monospace small text-uppercase tracking" data-album="tags">EXPERIMENTAL // ART-POP</span>
@@ -104,36 +94,32 @@
                                 <span class="font-monospace small text-dark text-opacity-50">4.0 // média da comunidade</span>
                             </div>
 
-                            <!-- botões de ação: US04, US07, US08 -->
                             <div class="d-flex flex-wrap gap-2 mt-auto">
                                 <a href="#registro" class="btn btn-danger btn-sm font-monospace fw-bold">
                                     <i class="bi bi-headphones me-1"></i> Marcar como ouvido
                                 </a>
-                                <button type="button" class="btn btn-outline-dark btn-sm font-monospace fw-semibold bg-white"
-                                    id="btn-listenlist">
-                                    <i class="bi bi-bookmark-plus me-1"></i> Listenlist
-                                </button>
-                                <button type="button" class="btn btn-outline-danger btn-sm font-monospace fw-semibold bg-white"
-                                    id="btn-favorito" aria-pressed="false">
-                                    <i class="bi bi-heart me-1"></i> Favoritar
-                                </button>
+                                <a href="login.html" class="text-decoration-none">
+                                    <button type="button" class="btn btn-outline-dark btn-sm font-monospace fw-semibold bg-white"
+                                        id="btn-listenlist">
+                                        <i class="bi bi-bookmark-plus me-1"></i> Listenlist
+                                    </button>
+                                    <button type="button" class="btn btn-outline-danger btn-sm font-monospace fw-semibold bg-white"
+                                        id="btn-favorito" aria-pressed="false">
+                                        <i class="bi bi-heart me-1"></i> Favoritar
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- ======================= CONTEÚDO ======================= -->
                 <section class="row g-4">
-
-                    <!-- COLUNA ESQUERDA: sobre + seu registro + resenhas -->
                     <div class="col-12 col-lg-8 d-flex flex-column gap-4">
-
-                        <!-- Sobre (wiki.summary do Last.fm) -->
                         <div class="d-flex flex-column gap-3">
                             <div class="d-flex flex-column gap-1">
                                 <span class="text-danger font-monospace small text-uppercase tracking">DADOS DO ARQUIVO</span>
                                 <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    <span class="bg-danger d-inline-block rounded-1 dot"></span>
                                     SOBRE O ÁLBUM
                                 </h2>
                             </div>
@@ -145,12 +131,11 @@
                             </div>
                         </div>
 
-                        <!-- Seu registro (US04, US05, US06) -->
                         <div class="d-flex flex-column gap-3" id="registro">
                             <div class="d-flex flex-column gap-1">
                                 <span class="text-danger font-monospace small text-uppercase tracking">MEMBRO // DIÁRIO</span>
                                 <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    <span class="bg-danger d-inline-block rounded-1 dot"></span>
                                     SEU REGISTRO
                                 </h2>
                             </div>
@@ -187,29 +172,18 @@
                                         <span id="contador-resenha">0</span>/1000
                                     </div>
                                 </div>
-
-                                <div class="d-flex flex-wrap gap-2">
-                                    <button type="submit" class="btn btn-danger btn-sm font-monospace fw-bold px-3">
-                                        [SALVAR REGISTRO]
-                                    </button>
-                                    <button type="reset" class="btn btn-outline-dark btn-sm font-monospace fw-semibold bg-white">
-                                        Limpar
-                                    </button>
-                                </div>
                             </form>
                         </div>
 
-                        <!-- Resenhas da comunidade -->
                         <div class="d-flex flex-column gap-3">
                             <div class="d-flex flex-column gap-1">
                                 <span class="text-danger font-monospace small text-uppercase tracking">DISCUSSÃO TÉCNICA</span>
                                 <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    <span class="bg-danger d-inline-block rounded-1 dot"></span>
                                     RESENHAS DESTE ÁLBUM
                                 </h2>
                             </div>
 
-                            <!-- o JS vai gerar estes cards a partir do JSON Server -->
                             <div id="lista-resenhas" class="d-flex flex-column gap-3">
                                 <article class="stat-card1 d-flex flex-column gap-2 p-3 p-md-4 rounded-3 border">
                                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
@@ -278,14 +252,13 @@
                         </div>
                     </div>
 
-                    <!-- COLUNA DIREITA: stats + tracklist -->
                     <div class="col-12 col-lg-4 d-flex flex-column gap-4">
 
                         <div class="d-flex flex-column gap-3">
                             <div class="d-flex flex-column gap-1">
                                 <span class="text-danger font-monospace small text-uppercase tracking">GLOBAL_STATS</span>
                                 <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    <span class="bg-danger d-inline-block rounded-1 dot"></span>
                                     NÚMEROS
                                 </h2>
                             </div>
@@ -318,12 +291,11 @@
                             <div class="d-flex flex-column gap-1">
                                 <span class="text-danger font-monospace small text-uppercase tracking">ARQUIVO // FAIXAS</span>
                                 <h2 class="h6 fw-bold text-dark text-uppercase mb-0 d-flex align-items-center gap-2 tracking">
-                                    <span class="bg-danger d-inline-block rounded-1" style="width: .6rem; height: .6rem;"></span>
+                                    <span class="bg-danger d-inline-block rounded-1 dot"></span>
                                     TRACKLIST
                                 </h2>
                             </div>
 
-                            <!-- o JS gera um <li> por faixa (tracks.track[]: name, duration, @attr.rank) -->
                             <ol class="stat-card1 border rounded-3 list-unstyled mb-0 font-monospace small px-3 py-1" id="lista-faixas">
                                 <li class="track-row d-flex justify-content-between align-items-center gap-3 py-2 border-bottom">
                                     <span class="d-flex gap-3 text-dark">
